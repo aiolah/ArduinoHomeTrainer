@@ -1,0 +1,681 @@
+[
+    {
+        "id": "e41511f7fea66bab",
+        "type": "tab",
+        "label": "Flux 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "95c338bedb281e80",
+        "type": "mqtt-broker",
+        "name": "MQTT",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "8c57ec7dd636743e",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "8a7eee67497c3c2d",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "1181d1a0f64df47a",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "8c57ec7dd636743e",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "8a7eee67497c3c2d",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "545970f6953b7a70",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "1181d1a0f64df47a",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default"
+    },
+    {
+        "id": "87cae945b89f6311",
+        "type": "inject",
+        "z": "e41511f7fea66bab",
+        "name": "Coucou",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Coucou",
+        "payloadType": "str",
+        "x": 230,
+        "y": 180,
+        "wires": [
+            [
+                "0a8fdb189311cb5f"
+            ]
+        ]
+    },
+    {
+        "id": "0a8fdb189311cb5f",
+        "type": "debug",
+        "z": "e41511f7fea66bab",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "322dfa938b61cc13",
+        "type": "function",
+        "z": "e41511f7fea66bab",
+        "name": "function 1",
+        "func": "msg.payload = \"HEY !\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 260,
+        "wires": [
+            [
+                "0a8fdb189311cb5f"
+            ]
+        ]
+    },
+    {
+        "id": "acc2e00f2808e0e2",
+        "type": "inject",
+        "z": "e41511f7fea66bab",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Bruh",
+        "payloadType": "str",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "322dfa938b61cc13"
+            ]
+        ]
+    },
+    {
+        "id": "64aea7bbe91be0ca",
+        "type": "mqtt in",
+        "z": "e41511f7fea66bab",
+        "d": true,
+        "name": "",
+        "topic": "homeTrainerCastres/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "95c338bedb281e80",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 380,
+        "wires": [
+            [
+                "fc765ca1b0664774"
+            ]
+        ]
+    },
+    {
+        "id": "fc765ca1b0664774",
+        "type": "ui-text",
+        "z": "e41511f7fea66bab",
+        "d": true,
+        "group": "545970f6953b7a70",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 550,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ad511564848b7bf1",
+        "type": "mqtt in",
+        "z": "e41511f7fea66bab",
+        "d": true,
+        "name": "",
+        "topic": "homeTrainerCastres/Group2-A/OIIA",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "95c338bedb281e80",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 560,
+        "wires": [
+            [
+                "3cd60c4ac2daa909",
+                "a8d55c195d3e8e86",
+                "0a8fdb189311cb5f"
+            ]
+        ]
+    },
+    {
+        "id": "3cd60c4ac2daa909",
+        "type": "ui-notification",
+        "z": "e41511f7fea66bab",
+        "d": true,
+        "ui": "8c57ec7dd636743e",
+        "position": "bottom right",
+        "colorDefault": false,
+        "color": "#9c0bd0",
+        "displayTime": "5",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "OIIA Notif",
+        "x": 520,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a8d55c195d3e8e86",
+        "type": "ui-text",
+        "z": "e41511f7fea66bab",
+        "d": true,
+        "group": "545970f6953b7a70",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "OIIA reçu !",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 530,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "02b7f6c3df360381",
+        "type": "mqtt in",
+        "z": "e41511f7fea66bab",
+        "name": "",
+        "topic": "homeTrainerCastres/Group2-A/Coeur",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "95c338bedb281e80",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 740,
+        "wires": [
+            [
+                "935c8845ab20a8f6",
+                "97f25a4b75aa964d",
+                "ab3032a2d87b13b6"
+            ]
+        ]
+    },
+    {
+        "id": "935c8845ab20a8f6",
+        "type": "ui-gauge",
+        "z": "e41511f7fea66bab",
+        "name": "",
+        "group": "545970f6953b7a70",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Battement du coeur",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "90",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "200",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 550,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e24bb1103451c95",
+        "type": "mqtt in",
+        "z": "e41511f7fea66bab",
+        "d": true,
+        "name": "",
+        "topic": "homeTrainerCastres/Group1-A/HeartBeat",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "95c338bedb281e80",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 480,
+        "wires": [
+            [
+                "bd410d1a6521b1f0"
+            ]
+        ]
+    },
+    {
+        "id": "bd410d1a6521b1f0",
+        "type": "ui-gauge",
+        "z": "e41511f7fea66bab",
+        "d": true,
+        "name": "",
+        "group": "545970f6953b7a70",
+        "order": 4,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 530,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97f25a4b75aa964d",
+        "type": "ui-chart",
+        "z": "e41511f7fea66bab",
+        "group": "545970f6953b7a70",
+        "name": "BPM en fonction du temps (s)",
+        "label": "chart",
+        "order": 5,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Temps (s)",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "BPM",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "200",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 590,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab3032a2d87b13b6",
+        "type": "function",
+        "z": "e41511f7fea66bab",
+        "name": "storeBpm",
+        "func": "let array = flow.get(\"bpm\");\n\narray.push(msg.payload);\n\nflow.set(\"bpm\", array);\n\nmsg.payload = array;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"bpm\", new Array());",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "bpm",
+                "module": "bpm"
+            }
+        ],
+        "x": 520,
+        "y": 900,
+        "wires": [
+            [
+                "c7429b31ce344fbd",
+                "21bf0c4966af866f"
+            ]
+        ]
+    },
+    {
+        "id": "c7429b31ce344fbd",
+        "type": "debug",
+        "z": "e41511f7fea66bab",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "21bf0c4966af866f",
+        "type": "function",
+        "z": "e41511f7fea66bab",
+        "name": "calculateAverage",
+        "func": "let array = flow.get(\"bpm\");\n\nlet total = 0;\n\nfor(let i = 0; i < array.length - 1; i++)\n{\n    total += array[i];\n}\n\nlet average = Math.round(total/array.length);\n\nflow.set(\"average\", average);\n\nmsg.payload = average;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"average\", 0);",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1020,
+        "wires": [
+            [
+                "66b54d751bd5d0ce",
+                "56eba104dbe983b2"
+            ]
+        ]
+    },
+    {
+        "id": "66b54d751bd5d0ce",
+        "type": "ui-text",
+        "z": "e41511f7fea66bab",
+        "group": "545970f6953b7a70",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "displayAverage",
+        "label": "Moyenne BPM",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "average",
+        "valueType": "flow",
+        "x": 940,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "56eba104dbe983b2",
+        "type": "debug",
+        "z": "e41511f7fea66bab",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "0219fe3baadf46e7",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.29.0"
+        }
+    }
+]
