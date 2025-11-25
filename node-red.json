@@ -1,6 +1,6 @@
 [
     {
-        "id": "e41511f7fea66bab",
+        "id": "bf2e2ec4406f5dfb",
         "type": "tab",
         "label": "Flux 1",
         "disabled": false,
@@ -8,129 +8,9 @@
         "env": []
     },
     {
-        "id": "95c338bedb281e80",
-        "type": "mqtt-broker",
-        "name": "MQTT",
-        "broker": "broker.emqx.io",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "8c57ec7dd636743e",
-        "type": "ui-base",
-        "name": "My Dashboard",
-        "path": "/dashboard",
-        "appIcon": "",
-        "includeClientData": true,
-        "acceptsClientConfig": [
-            "ui-notification",
-            "ui-control"
-        ],
-        "showPathInSidebar": false,
-        "headerContent": "page",
-        "navigationStyle": "default",
-        "titleBarStyle": "default",
-        "showReconnectNotification": true,
-        "notificationDisplayTime": 1,
-        "showDisconnectNotification": true,
-        "allowInstall": false
-    },
-    {
-        "id": "8a7eee67497c3c2d",
-        "type": "ui-theme",
-        "name": "Default Theme",
-        "colors": {
-            "surface": "#ffffff",
-            "primary": "#0094CE",
-            "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
-            "groupOutline": "#cccccc"
-        },
-        "sizes": {
-            "density": "default",
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "12px"
-        }
-    },
-    {
-        "id": "1181d1a0f64df47a",
-        "type": "ui-page",
-        "name": "Page 1",
-        "ui": "8c57ec7dd636743e",
-        "path": "/page1",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "8a7eee67497c3c2d",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": 0,
-                "cols": 3
-            },
-            {
-                "name": "Tablet",
-                "px": 576,
-                "cols": 6
-            },
-            {
-                "name": "Small Desktop",
-                "px": 768,
-                "cols": 9
-            },
-            {
-                "name": "Desktop",
-                "px": 1024,
-                "cols": 12
-            }
-        ],
-        "order": 1,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "545970f6953b7a70",
-        "type": "ui-group",
-        "name": "Group 1",
-        "page": "1181d1a0f64df47a",
-        "width": 6,
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": true,
-        "disabled": false,
-        "groupType": "default"
-    },
-    {
-        "id": "87cae945b89f6311",
+        "id": "9b444f6d61d90976",
         "type": "inject",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "Coucou",
         "props": [
             {
@@ -152,14 +32,14 @@
         "y": 180,
         "wires": [
             [
-                "0a8fdb189311cb5f"
+                "5aea2e725cf93a30"
             ]
         ]
     },
     {
-        "id": "0a8fdb189311cb5f",
+        "id": "5aea2e725cf93a30",
         "type": "debug",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
@@ -174,9 +54,9 @@
         "wires": []
     },
     {
-        "id": "322dfa938b61cc13",
+        "id": "26667e07ddc94585",
         "type": "function",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "function 1",
         "func": "msg.payload = \"HEY !\"\nreturn msg;",
         "outputs": 1,
@@ -189,14 +69,14 @@
         "y": 260,
         "wires": [
             [
-                "0a8fdb189311cb5f"
+                "5aea2e725cf93a30"
             ]
         ]
     },
     {
-        "id": "acc2e00f2808e0e2",
+        "id": "3cdd4f3781e47e3f",
         "type": "inject",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "",
         "props": [
             {
@@ -218,14 +98,14 @@
         "y": 260,
         "wires": [
             [
-                "322dfa938b61cc13"
+                "26667e07ddc94585"
             ]
         ]
     },
     {
-        "id": "64aea7bbe91be0ca",
+        "id": "4ecd7818545e9640",
         "type": "mqtt in",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "d": true,
         "name": "",
         "topic": "homeTrainerCastres/#",
@@ -240,17 +120,17 @@
         "y": 380,
         "wires": [
             [
-                "fc765ca1b0664774"
+                "fcda51beb5819b3a"
             ]
         ]
     },
     {
-        "id": "fc765ca1b0664774",
+        "id": "fcda51beb5819b3a",
         "type": "ui-text",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "d": true,
         "group": "545970f6953b7a70",
-        "order": 3,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "",
@@ -270,9 +150,9 @@
         "wires": []
     },
     {
-        "id": "ad511564848b7bf1",
+        "id": "efe871087cf9751e",
         "type": "mqtt in",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "d": true,
         "name": "",
         "topic": "homeTrainerCastres/Group2-A/OIIA",
@@ -287,18 +167,18 @@
         "y": 560,
         "wires": [
             [
-                "3cd60c4ac2daa909",
-                "a8d55c195d3e8e86",
-                "0a8fdb189311cb5f"
+                "0ea7465239f5f1b5",
+                "98e1d8d94565b88b",
+                "5aea2e725cf93a30"
             ]
         ]
     },
     {
-        "id": "3cd60c4ac2daa909",
+        "id": "0ea7465239f5f1b5",
         "type": "ui-notification",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "d": true,
-        "ui": "8c57ec7dd636743e",
+        "ui": "335bbf8be9cdcd03",
         "position": "bottom right",
         "colorDefault": false,
         "color": "#9c0bd0",
@@ -319,12 +199,12 @@
         ]
     },
     {
-        "id": "a8d55c195d3e8e86",
+        "id": "98e1d8d94565b88b",
         "type": "ui-text",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "d": true,
         "group": "545970f6953b7a70",
-        "order": 2,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -344,9 +224,9 @@
         "wires": []
     },
     {
-        "id": "02b7f6c3df360381",
+        "id": "bab3d4f5b8e4e840",
         "type": "mqtt in",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "",
         "topic": "homeTrainerCastres/Group2-A/Coeur",
         "qos": "2",
@@ -360,19 +240,19 @@
         "y": 740,
         "wires": [
             [
-                "935c8845ab20a8f6",
-                "97f25a4b75aa964d",
-                "ab3032a2d87b13b6"
+                "2223b9f1a5a54d4d",
+                "65247267ce6f5306",
+                "8f9efd8954e7abd0"
             ]
         ]
     },
     {
-        "id": "935c8845ab20a8f6",
+        "id": "2223b9f1a5a54d4d",
         "type": "ui-gauge",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "",
         "group": "545970f6953b7a70",
-        "order": 1,
+        "order": 3,
         "value": "payload",
         "valueType": "msg",
         "width": 3,
@@ -427,9 +307,9 @@
         ]
     },
     {
-        "id": "5e24bb1103451c95",
+        "id": "0b407e65f2f8a3d8",
         "type": "mqtt in",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "d": true,
         "name": "",
         "topic": "homeTrainerCastres/Group1-A/HeartBeat",
@@ -444,18 +324,18 @@
         "y": 480,
         "wires": [
             [
-                "bd410d1a6521b1f0"
+                "a4399ed3bec1ed62"
             ]
         ]
     },
     {
-        "id": "bd410d1a6521b1f0",
+        "id": "a4399ed3bec1ed62",
         "type": "ui-gauge",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "d": true,
         "name": "",
         "group": "545970f6953b7a70",
-        "order": 4,
+        "order": 6,
         "value": "payload",
         "valueType": "msg",
         "width": 3,
@@ -504,13 +384,13 @@
         ]
     },
     {
-        "id": "97f25a4b75aa964d",
+        "id": "65247267ce6f5306",
         "type": "ui-chart",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "group": "545970f6953b7a70",
         "name": "BPM en fonction du temps (s)",
         "label": "chart",
-        "order": 5,
+        "order": 7,
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
@@ -566,9 +446,9 @@
         ]
     },
     {
-        "id": "ab3032a2d87b13b6",
+        "id": "8f9efd8954e7abd0",
         "type": "function",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "storeBpm",
         "func": "let array = flow.get(\"bpm\");\n\narray.push(msg.payload);\n\nflow.set(\"bpm\", array);\n\nmsg.payload = array;\n\nreturn msg;",
         "outputs": 1,
@@ -586,15 +466,15 @@
         "y": 900,
         "wires": [
             [
-                "c7429b31ce344fbd",
-                "21bf0c4966af866f"
+                "f98fe66a8963fb91",
+                "2e09f74a88d4b1ed"
             ]
         ]
     },
     {
-        "id": "c7429b31ce344fbd",
+        "id": "f98fe66a8963fb91",
         "type": "debug",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "debug 2",
         "active": true,
         "tosidebar": true,
@@ -609,9 +489,9 @@
         "wires": []
     },
     {
-        "id": "21bf0c4966af866f",
+        "id": "2e09f74a88d4b1ed",
         "type": "function",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "calculateAverage",
         "func": "let array = flow.get(\"bpm\");\n\nlet total = 0;\n\nfor(let i = 0; i < array.length - 1; i++)\n{\n    total += array[i];\n}\n\nlet average = Math.round(total/array.length);\n\nflow.set(\"average\", average);\n\nmsg.payload = average;\nreturn msg;",
         "outputs": 1,
@@ -624,17 +504,17 @@
         "y": 1020,
         "wires": [
             [
-                "66b54d751bd5d0ce",
-                "56eba104dbe983b2"
+                "f816ec0ae5731e9b",
+                "6acb1b2e17fd9a6e"
             ]
         ]
     },
     {
-        "id": "66b54d751bd5d0ce",
+        "id": "f816ec0ae5731e9b",
         "type": "ui-text",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "group": "545970f6953b7a70",
-        "order": 0,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "displayAverage",
@@ -650,13 +530,13 @@
         "value": "average",
         "valueType": "flow",
         "x": 940,
-        "y": 1020,
+        "y": 1000,
         "wires": []
     },
     {
-        "id": "56eba104dbe983b2",
+        "id": "6acb1b2e17fd9a6e",
         "type": "debug",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "debug 3",
         "active": true,
         "tosidebar": true,
@@ -671,9 +551,9 @@
         "wires": []
     },
     {
-        "id": "a41f7e8fc57c8002",
+        "id": "92826e4981958d86",
         "type": "mqtt in",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "",
         "topic": "homeTrainerCastres/Group2-A/Bouton",
         "qos": "2",
@@ -687,17 +567,18 @@
         "y": 1160,
         "wires": [
             [
-                "bb559cdcb072b2b1",
-                "308867ed25bd94de",
-                "3ed075334cbbea71"
+                "1a646d438927ef81",
+                "5c87394eea679ba6",
+                "7172988423c3a2b1",
+                "f2bc91e937b3a162"
             ]
         ]
     },
     {
-        "id": "1ac0f1101ae1980a",
+        "id": "1488843d999713ea",
         "type": "ui-notification",
-        "z": "e41511f7fea66bab",
-        "ui": "8c57ec7dd636743e",
+        "z": "bf2e2ec4406f5dfb",
+        "ui": "335bbf8be9cdcd03",
         "position": "center center",
         "colorDefault": false,
         "color": "#ec18d0",
@@ -711,16 +592,16 @@
         "raw": false,
         "className": "",
         "name": "",
-        "x": 790,
-        "y": 1280,
+        "x": 870,
+        "y": 1260,
         "wires": [
             []
         ]
     },
     {
-        "id": "bb559cdcb072b2b1",
+        "id": "1a646d438927ef81",
         "type": "function",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "Début prise de pouls",
         "func": "if(msg.payload == \"Début de prise de pouls\")\n{\n    return msg;\n}",
         "outputs": 1,
@@ -729,18 +610,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
-        "y": 1220,
+        "x": 560,
+        "y": 1200,
         "wires": [
             [
-                "1ac0f1101ae1980a"
+                "1488843d999713ea"
             ]
         ]
     },
     {
-        "id": "308867ed25bd94de",
+        "id": "5c87394eea679ba6",
         "type": "function",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "sendAverageBPMToClient",
         "func": "if(msg.payload == \"Fin de prise de pouls\")\n{\n    let average = flow.get(\"average\");\n\n    msg.payload = average;\n    \n    return msg;\n}",
         "outputs": 1,
@@ -753,15 +634,15 @@
         "y": 1480,
         "wires": [
             [
-                "2ce52b8d56a91655"
+                "445e409db9213277"
             ]
         ]
     },
     {
-        "id": "5fd64e62554672f7",
+        "id": "ac6bbfb115741578",
         "type": "ui-notification",
-        "z": "e41511f7fea66bab",
-        "ui": "8c57ec7dd636743e",
+        "z": "bf2e2ec4406f5dfb",
+        "ui": "335bbf8be9cdcd03",
         "position": "center center",
         "colorDefault": false,
         "color": "#f20707",
@@ -775,16 +656,16 @@
         "raw": false,
         "className": "",
         "name": "",
-        "x": 790,
+        "x": 850,
         "y": 1400,
         "wires": [
             []
         ]
     },
     {
-        "id": "2ce52b8d56a91655",
+        "id": "445e409db9213277",
         "type": "mqtt out",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "",
         "topic": "homeTrainerCastres/Group2-A/AverageBPM",
         "qos": "2",
@@ -800,9 +681,9 @@
         "wires": []
     },
     {
-        "id": "3ed075334cbbea71",
+        "id": "7172988423c3a2b1",
         "type": "function",
-        "z": "e41511f7fea66bab",
+        "z": "bf2e2ec4406f5dfb",
         "name": "Show end prise de pouls",
         "func": "if(msg.payload == \"Fin de prise de pouls\")\n{    \n    return msg;\n}",
         "outputs": 1,
@@ -815,12 +696,193 @@
         "y": 1400,
         "wires": [
             [
-                "5fd64e62554672f7"
+                "ac6bbfb115741578"
             ]
         ]
     },
     {
-        "id": "4b5e8929249ed025",
+        "id": "f2bc91e937b3a162",
+        "type": "function",
+        "z": "bf2e2ec4406f5dfb",
+        "name": "",
+        "func": "let timerRunning = flow.get(\"timerRunning\") || false;\nlet startTime = flow.get(\"startTime\") || 0;\nlet elapsedTime = flow.get(\"elapsedTime\") || 0;\n\n// Si le bouton est pressé\nif(msg.payload === \"Début de prise de pouls\") {\n    if(!timerRunning) {\n        // démarrer le timer\n        startTime = new Date().getTime();\n        timerRunning = true;\n        elapsedTime = 0;\n    } else {\n        // arrêter le timer\n        elapsedTime = new Date().getTime() - startTime;\n        timerRunning = false;\n    }\n}\n\n// Sauvegarde dans flow context\nflow.set(\"timerRunning\", timerRunning);\nflow.set(\"startTime\", startTime);\nflow.set(\"elapsedTime\", elapsedTime);\n\n// Envoie le temps actuel pour affichage\nif(timerRunning) {\n    msg.payload = Math.floor((new Date().getTime() - startTime) / 1000); // secondes écoulées\n} else {\n    msg.payload = Math.floor(elapsedTime / 1000); // durée finale\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1300,
+        "wires": [
+            [
+                "b164ccadeb211d80"
+            ]
+        ]
+    },
+    {
+        "id": "1b23bf404c6157fc",
+        "type": "inject",
+        "z": "bf2e2ec4406f5dfb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1280,
+        "wires": [
+            [
+                "f2bc91e937b3a162"
+            ]
+        ]
+    },
+    {
+        "id": "b164ccadeb211d80",
+        "type": "ui-progress",
+        "z": "bf2e2ec4406f5dfb",
+        "group": "545970f6953b7a70",
+        "name": "",
+        "label": "Progress",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "color": "",
+        "className": "",
+        "x": 900,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "95c338bedb281e80",
+        "type": "mqtt-broker",
+        "name": "MQTT",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "545970f6953b7a70",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "1181d1a0f64df47a",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "335bbf8be9cdcd03",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "1181d1a0f64df47a",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "335bbf8be9cdcd03",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "8a7eee67497c3c2d",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "8a7eee67497c3c2d",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "ac4d4b6cc4ccf070",
         "type": "global-config",
         "env": [],
         "modules": {
