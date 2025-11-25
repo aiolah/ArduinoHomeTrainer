@@ -671,7 +671,156 @@
         "wires": []
     },
     {
-        "id": "0219fe3baadf46e7",
+        "id": "a41f7e8fc57c8002",
+        "type": "mqtt in",
+        "z": "e41511f7fea66bab",
+        "name": "",
+        "topic": "homeTrainerCastres/Group2-A/Bouton",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "95c338bedb281e80",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 1160,
+        "wires": [
+            [
+                "bb559cdcb072b2b1",
+                "308867ed25bd94de",
+                "3ed075334cbbea71"
+            ]
+        ]
+    },
+    {
+        "id": "1ac0f1101ae1980a",
+        "type": "ui-notification",
+        "z": "e41511f7fea66bab",
+        "ui": "8c57ec7dd636743e",
+        "position": "center center",
+        "colorDefault": false,
+        "color": "#ec18d0",
+        "displayTime": "5",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "",
+        "x": 790,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb559cdcb072b2b1",
+        "type": "function",
+        "z": "e41511f7fea66bab",
+        "name": "Début prise de pouls",
+        "func": "if(msg.payload == \"Début de prise de pouls\")\n{\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1220,
+        "wires": [
+            [
+                "1ac0f1101ae1980a"
+            ]
+        ]
+    },
+    {
+        "id": "308867ed25bd94de",
+        "type": "function",
+        "z": "e41511f7fea66bab",
+        "name": "sendAverageBPMToClient",
+        "func": "if(msg.payload == \"Fin de prise de pouls\")\n{\n    let average = flow.get(\"average\");\n\n    msg.payload = average;\n    \n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1480,
+        "wires": [
+            [
+                "2ce52b8d56a91655"
+            ]
+        ]
+    },
+    {
+        "id": "5fd64e62554672f7",
+        "type": "ui-notification",
+        "z": "e41511f7fea66bab",
+        "ui": "8c57ec7dd636743e",
+        "position": "center center",
+        "colorDefault": false,
+        "color": "#f20707",
+        "displayTime": "5",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "",
+        "x": 790,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ce52b8d56a91655",
+        "type": "mqtt out",
+        "z": "e41511f7fea66bab",
+        "name": "",
+        "topic": "homeTrainerCastres/Group2-A/AverageBPM",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "95c338bedb281e80",
+        "x": 790,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "3ed075334cbbea71",
+        "type": "function",
+        "z": "e41511f7fea66bab",
+        "name": "Show end prise de pouls",
+        "func": "if(msg.payload == \"Fin de prise de pouls\")\n{    \n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1400,
+        "wires": [
+            [
+                "5fd64e62554672f7"
+            ]
+        ]
+    },
+    {
+        "id": "4b5e8929249ed025",
         "type": "global-config",
         "env": [],
         "modules": {
