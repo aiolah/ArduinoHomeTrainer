@@ -13,6 +13,8 @@ const char *mqtt_topic2 = "dataCastres/topic2";
 const char *mqtt_topic3 = "homeTrainerCastres/Group2-A/MAC";
 const char *mqtt_topic4 = "homeTrainerCastres/Group2-A/OIIA";
 const char *mqtt_topic5 = "homeTrainerCastres/Group2-A/Coeur";
+const char *mqtt_topic6 = "homeTrainerCastres/Group2-A/Bouton";
+const char *mqtt_topic7 = "homeTrainerCastres/Group2-A/AverageBPM";
 const int mqtt_port = 1883;
 
 String client_id = "ArduinoClient-";
@@ -26,6 +28,20 @@ PubSubClient mqtt_client(espClient);
 int ledPin = 13;
 int analogPin = 0;
 const int delayMsec = 60;
+int averageBPM = 0;
+bool averageBPMreceived = false;
+
+// Bouton
+int buttonPin = 10;
+int buttonPressedCounter = 0;
+
+int buttonState;            // the current reading from the input pin
+int lastButtonState = HIGH;  // the previous reading from the input pin
+
+// the following variables are unsigned longs because the time, measured in
+// milliseconds, will quickly become a bigger number than can be stored in an int.
+unsigned long lastDebounceTime = 0;  // the last time the output pin was toggled
+unsigned long debounceDelay = 50;    // the debounce time; increase if the output flickers
 
 // Buzzer
 #define D0 -1
@@ -329,6 +345,29 @@ void playNote(char note, int duration) {
   }
 }
 
+void playZeldaMusic()
+{
+  // Zelda music
+    pinMode(speakerPin, OUTPUT);
+    // if (digitalRead(switchPin) == 1)
+    // {
+      for (int i = 0; i < length; i++)
+      {
+        if (notes[i] == ' ')
+        {
+          delay(beats[i] * tempo); // rest
+        }
+        else
+        {
+          playNote(notes[i], beats[i] * tempo);
+        }
+      
+      // pause between notes
+      delay(tempo / 2); 
+    // }
+  }
+}
+
 // ------------------------------------------------------------
 // STAR WARS MUSIC - Imperial March
 // ------------------------------------------------------------
@@ -412,6 +451,43 @@ void secondSection()
   delay(350);
 }
 
+void playImperialMarch()
+{
+  // Star Wars music - Imperial march
+  //Play first section
+  firstSection();
+   
+  //Play second section
+  secondSection();
+ 
+  //Variant 1
+  beep(f,   250);  
+  beep(gS, 500);  
+  beep(f, 350);  
+  beep(a, 125);
+  beep(cH,   500);
+  beep(a, 375);  
+  beep(cH, 125);
+  beep(eH, 650);
+ 
+  delay(500);
+   
+  //Repeat second section
+  secondSection();
+ 
+  //Variant 2
+  beep(f,   250);  
+  beep(gS, 500);  
+  beep(f, 375);  
+  beep(cH, 125);
+  beep(a,   500);  
+  beep(f, 375);  
+  beep(cH, 125);
+  beep(a, 650);  
+ 
+  delay(650);
+}
+
 // ------------------------------------------------------------
 // SETUP
 // ------------------------------------------------------------
@@ -478,62 +554,13 @@ void setup()
 
   // delay(2000);
 
-  // Zelda music
-
-    pinMode(speakerPin, OUTPUT);
-    // if (digitalRead(switchPin) == 1)
-    // {
-      for (int i = 0; i < length; i++)
-      {
-        if (notes[i] == ' ')
-        {
-          delay(beats[i] * tempo); // rest
-        }
-        else
-        {
-          playNote(notes[i], beats[i] * tempo);
-        }
-      
-      // pause between notes
-      delay(tempo / 2); 
-    // }
-  }
-
   delay(100);
-  
-  // Star Wars music - Imperial march
-  //Play first section
-  firstSection();
-   
-  //Play second section
-  secondSection();
- 
-  //Variant 1
-  beep(f,   250);  
-  beep(gS, 500);  
-  beep(f, 350);  
-  beep(a, 125);
-  beep(cH,   500);
-  beep(a, 375);  
-  beep(cH, 125);
-  beep(eH, 650);
- 
-  delay(500);
-   
-  //Repeat second section
-  secondSection();
- 
-  //Variant 2
-  beep(f,   250);  
-  beep(gS, 500);  
-  beep(f, 375);  
-  beep(cH, 125);
-  beep(a,   500);  
-  beep(f, 375);  
-  beep(cH, 125);
-  beep(a, 650);  
- 
-  delay(650);*/
+
+  */
+
+  // Bouton
+  pinMode(buttonPin, INPUT_PULLUP);
+  digitalWrite(buttonPin, HIGH);
 }
 
 // ------------------------------------------------------------
@@ -599,11 +626,13 @@ void connectToMQTTBroker()
     {
       Serial.println("Connected to MQTT broker");
 
-      mqtt_client.subscribe(mqtt_topic1);
-      mqtt_client.subscribe(mqtt_topic2);
+      // mqtt_client.subscribe(mqtt_topic1);
+      // mqtt_client.subscribe(mqtt_topic2);
       mqtt_client.subscribe(mqtt_topic3);
       mqtt_client.subscribe(mqtt_topic4);
       mqtt_client.subscribe(mqtt_topic5);
+      mqtt_client.subscribe(mqtt_topic6);
+      mqtt_client.subscribe(mqtt_topic7);
 
       String message = "Hello EMQX I'm " + client_id;
       mqtt_client.publish(mqtt_topic1, message.c_str());
@@ -636,6 +665,16 @@ void mqttCallback(char *topic, byte *payload, unsigned int length)
 
   Serial.println(messageTemp);
   Serial.println("-----------------------");
+
+  // TODO : Add your message handling logic here
+  // For example, you can check the topic and perform actions based on the message content
+  // Example:
+  if(String(topic) == String(mqtt_topic7))
+  {
+    Serial.println("______________AVERAGE BPM______________");
+    averageBPM = messageTemp.toInt();
+    averageBPMreceived = true;
+  }
 }
 
 // ------------------------------------------------------------
@@ -690,6 +729,103 @@ void loop()
   static int beatMsec = 0;
   int heartRateBPM = 0;
 
+  // Quand on reçoit la moyenne : on joue une musique
+  if(averageBPMreceived)
+  {
+    if(averageBPM > 125)
+    {
+      Serial.println("MUSIQUE IMPERIAL MARCH");
+      playImperialMarch();
+    }
+    else
+    {
+      Serial.println("MUSIC ZELDA");
+      playZeldaMusic();
+    }
+
+    averageBPMreceived = false;
+  }
+
+  // read the state of the switch into a local variable:
+  int readingButton = digitalRead(buttonPin);
+
+  // check to see if you just pressed the button
+  // (i.e. the input went from LOW to HIGH), and you've waited long enough
+  // since the last press to ignore any noise:
+
+  // If the switch changed, due to noise or pressing:
+  if(readingButton != lastButtonState)
+  {
+    // reset the debouncing timer
+    lastDebounceTime = millis();
+  }
+
+  if((millis() - lastDebounceTime) > debounceDelay)
+  {
+    // whatever the reading is at, it's been there for longer than the debounce
+    // delay, so take it as the actual current state:
+
+    // if the button state has changed:
+    if(readingButton != buttonState)
+    {
+      buttonState = readingButton;
+    }
+  }
+
+  // save the readingButton. Next time through the loop, it'll be the lastButtonState:
+  lastButtonState = readingButton;
+
+  // Bouton
+  if(readingButton == LOW)
+  {
+    buttonPressedCounter++;
+
+    if(buttonPressedCounter % 2 != 0)
+    {
+      mqtt_client.publish(mqtt_topic6, "Début de prise de pouls");
+      Serial.println("Average BPM : " + averageBPM);
+    }
+    else
+    {
+      mqtt_client.publish(mqtt_topic6, "Fin de prise de pouls");
+      Serial.println("Average BPM : " + averageBPM);
+    }
+    
+    Serial.println("Bouton appuyé !");
+    digitalWrite(buttonPin, HIGH);
+
+    Serial.println(buttonPressedCounter);
+  }
+
+  // Heartbeat detection
+  if(buttonPressedCounter % 2 != 0)
+  {
+    if(heartbeatDetected(analogPin, delayMsec))
+    {
+      heartRateBPM = 60000 / beatMsec;
+
+      // Light the LED when a heartbeat is detected
+      digitalWrite(ledPin, HIGH);
+      // Play a sound when a hearbeat is detected
+      tone(buzzerPin, H7, 5);
+
+      String msgCoeur = String(heartRateBPM);
+      mqtt_client.publish(mqtt_topic5, msgCoeur.c_str());
+
+      Serial.print("Puls erkannt: ");
+      Serial.println(heartRateBPM);
+
+      beatMsec = 0;
+    }
+    else
+    {
+      digitalWrite(ledPin, LOW);
+    }
+
+    delay(delayMsec);
+    beatMsec += delayMsec;
+  }
+
   // Publish MAC periodically
   if (currentTime - lastPublishTime >= 10000)
   {
@@ -704,30 +840,4 @@ void loop()
     // mqtt_client.publish(mqtt_topic3, MACmsg.c_str());
     // mqtt_client.publish(mqtt_topic4, "Miaou");
   }
-
-  // Heartbeat detection
-  if (heartbeatDetected(analogPin, delayMsec))
-  {
-    heartRateBPM = 60000 / beatMsec;
-
-    // Light the LED when a heartbeat is detected
-    digitalWrite(ledPin, HIGH);
-    // Play a sound when a hearbeat is detected
-    tone(buzzerPin, H7, 5);
-
-    String msgCoeur = String(heartRateBPM);
-    mqtt_client.publish(mqtt_topic5, msgCoeur.c_str());
-
-    Serial.print("Puls erkannt: ");
-    Serial.println(heartRateBPM);
-
-    beatMsec = 0;
-  }
-  else
-  {
-    digitalWrite(ledPin, LOW);
-  }
-
-  delay(delayMsec);
-  beatMsec += delayMsec;
 }
