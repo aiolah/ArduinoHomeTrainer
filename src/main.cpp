@@ -374,7 +374,7 @@ void playZeldaMusic()
 void beep(int note, int duration)
 {
   //Play tone on buzzerPin
-  tone(buzzerPin,   note, duration);
+  tone(buzzerPin, note);
  
   //Play different LED depending on value of 'counter'
   // if(counter % 2 == 0)
@@ -389,11 +389,11 @@ void beep(int note, int duration)
   //   delay(duration);
   //   // digitalWrite(ledPin2, LOW);
   // }
- 
+  delay(duration); // maintain the tone for 'duration' milliseconds
   //Stop   tone on buzzerPin
   noTone(buzzerPin);
  
-  delay(50);
+  delay(duration * 0.30);
  
   //Increment   counter
   counter++;
@@ -732,7 +732,7 @@ void loop()
   // Quand on reçoit la moyenne : on joue une musique
   if(averageBPMreceived)
   {
-    if(averageBPM > 125)
+    if(averageBPM > 100)
     {
       Serial.println("MUSIQUE IMPERIAL MARCH");
       playImperialMarch();
