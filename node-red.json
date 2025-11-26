@@ -8,6 +8,228 @@
         "env": []
     },
     {
+        "id": "4436f714beca43eb",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b05bc051328cc7c2",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "335bbf8be9cdcd03",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "002edd35d1142f1d",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "95c338bedb281e80",
+        "type": "mqtt-broker",
+        "name": "MQTT",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "8a7eee67497c3c2d",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "1181d1a0f64df47a",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "335bbf8be9cdcd03",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "8a7eee67497c3c2d",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "545970f6953b7a70",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "1181d1a0f64df47a",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "MQTT Broker",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
         "id": "9b444f6d61d90976",
         "type": "inject",
         "z": "bf2e2ec4406f5dfb",
@@ -130,7 +352,7 @@
         "z": "bf2e2ec4406f5dfb",
         "d": true,
         "group": "545970f6953b7a70",
-        "order": 5,
+        "order": 7,
         "width": 0,
         "height": 0,
         "name": "",
@@ -204,7 +426,7 @@
         "z": "bf2e2ec4406f5dfb",
         "d": true,
         "group": "545970f6953b7a70",
-        "order": 4,
+        "order": 6,
         "width": 0,
         "height": 0,
         "name": "",
@@ -240,9 +462,7 @@
         "y": 740,
         "wires": [
             [
-                "2223b9f1a5a54d4d",
-                "65247267ce6f5306",
-                "8f9efd8954e7abd0"
+                "a0b89867c7df2c9f"
             ]
         ]
     },
@@ -252,7 +472,7 @@
         "z": "bf2e2ec4406f5dfb",
         "name": "",
         "group": "545970f6953b7a70",
-        "order": 3,
+        "order": 5,
         "value": "payload",
         "valueType": "msg",
         "width": 3,
@@ -269,38 +489,44 @@
         "segments": [
             {
                 "from": "0",
-                "color": "#ffc800",
+                "color": "#ea5353",
                 "text": "",
                 "textType": "label"
             },
             {
                 "from": "60",
-                "color": "#5cd65c",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "80",
                 "color": "#ffc800",
                 "text": "",
                 "textType": "label"
             },
             {
-                "from": "90",
+                "from": "85",
+                "color": "#1ee01a",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "120",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "150",
                 "color": "#ea5353",
                 "text": "",
                 "textType": "label"
             }
         ],
         "min": 0,
-        "max": "200",
+        "max": "150",
         "sizeThickness": 16,
         "sizeGap": 4,
         "sizeKeyThickness": 8,
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 550,
+        "x": 950,
         "y": 740,
         "wires": [
             []
@@ -335,7 +561,7 @@
         "d": true,
         "name": "",
         "group": "545970f6953b7a70",
-        "order": 6,
+        "order": 8,
         "value": "payload",
         "valueType": "msg",
         "width": 3,
@@ -390,7 +616,7 @@
         "group": "545970f6953b7a70",
         "name": "BPM en fonction du temps (s)",
         "label": "chart",
-        "order": 7,
+        "order": 9,
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
@@ -439,7 +665,7 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 590,
+        "x": 990,
         "y": 820,
         "wires": [
             []
@@ -462,7 +688,7 @@
                 "module": "bpm"
             }
         ],
-        "x": 520,
+        "x": 640,
         "y": 900,
         "wires": [
             [
@@ -484,7 +710,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
+        "x": 860,
         "y": 900,
         "wires": []
     },
@@ -500,7 +726,7 @@
         "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"average\", 0);",
         "finalize": "",
         "libs": [],
-        "x": 710,
+        "x": 790,
         "y": 1020,
         "wires": [
             [
@@ -514,7 +740,7 @@
         "type": "ui-text",
         "z": "bf2e2ec4406f5dfb",
         "group": "545970f6953b7a70",
-        "order": 2,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "displayAverage",
@@ -529,8 +755,8 @@
         "className": "",
         "value": "average",
         "valueType": "flow",
-        "x": 940,
-        "y": 1000,
+        "x": 1040,
+        "y": 980,
         "wires": []
     },
     {
@@ -546,8 +772,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
-        "y": 1100,
+        "x": 1020,
+        "y": 1080,
         "wires": []
     },
     {
@@ -592,8 +818,8 @@
         "raw": false,
         "className": "",
         "name": "",
-        "x": 870,
-        "y": 1260,
+        "x": 850,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -704,19 +930,21 @@
         "id": "f2bc91e937b3a162",
         "type": "function",
         "z": "bf2e2ec4406f5dfb",
-        "name": "",
-        "func": "let timerRunning = flow.get(\"timerRunning\") || false;\nlet startTime = flow.get(\"startTime\") || 0;\nlet elapsedTime = flow.get(\"elapsedTime\") || 0;\n\n// Si le bouton est pressé\nif(msg.payload === \"Début de prise de pouls\") {\n    if(!timerRunning) {\n        // démarrer le timer\n        startTime = new Date().getTime();\n        timerRunning = true;\n        elapsedTime = 0;\n    } else {\n        // arrêter le timer\n        elapsedTime = new Date().getTime() - startTime;\n        timerRunning = false;\n    }\n}\n\n// Sauvegarde dans flow context\nflow.set(\"timerRunning\", timerRunning);\nflow.set(\"startTime\", startTime);\nflow.set(\"elapsedTime\", elapsedTime);\n\n// Envoie le temps actuel pour affichage\nif(timerRunning) {\n    msg.payload = Math.floor((new Date().getTime() - startTime) / 1000); // secondes écoulées\n} else {\n    msg.payload = Math.floor(elapsedTime / 1000); // durée finale\n}\n\nreturn msg;",
+        "name": "Timer",
+        "func": "let timerRunning = flow.get(\"timerRunning\") || false;\nlet startTime = flow.get(\"startTime\") || 0;\nlet elapsedTime = flow.get(\"elapsedTime\") || 0;\nlet timePassed = flow.get(\"timePassed\") || 0;\n\nlet duration = flow.get(\"duration\") || 0;\nconsole.log(duration);\n\nif(msg.topic == \"duration\")\n{\n    let input = parseInt(msg.payload);\n    input += 1;\n    duration = input;\n    flow.set(\"duration\", duration);\n}\n\n// Si le bouton est pressé\nif(msg.payload === \"Début de prise de pouls\") {\n    // msg.payload = 0;\n    if(!timerRunning) {\n        // démarrer le timer\n        startTime = new Date().getTime();\n        timerRunning = true;\n        elapsedTime = 0;\n    }\n}\nelse if(msg.payload === \"Fin de prise de pouls\")\n{\n    // arrêter le timer\n    elapsedTime = new Date().getTime() - startTime;\n    timerRunning = false;\n}\n\nif(timerRunning)\n{\n    console.log(\"timmer IS RUNNING OIIA\");\n    let time = Math.floor((new Date().getTime() - startTime) / 1000);\n    console.log(\"TIME : \" + time);\n    timePassed = time;\n}\n\nif(timerRunning == true && timePassed < duration)// Envoie le temps actuel pour affichage\n{\n    console.log(\"Coucou\");\n    let time = Math.floor((new Date().getTime() - startTime) / 1000); // secondes écoulées\n    timePassed = time;\n\n    console.log(\"TIME PASSED : \" + timePassed);\n\n    flow.set(\"timeWithSeconds\", time + \"s\");\n}\n\n// Sauvegarde dans flow context\nflow.set(\"timerRunning\", timerRunning);\nflow.set(\"startTime\", startTime);\nflow.set(\"elapsedTime\", elapsedTime);\nflow.set(\"timePassed\", timePassed);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
-        "y": 1300,
+        "x": 530,
+        "y": 1280,
         "wires": [
             [
-                "b164ccadeb211d80"
+                "6a6abd5ae34d8cc7",
+                "0302db8d1248af51",
+                "7f869dd5d6a041ee"
             ]
         ]
     },
@@ -737,7 +965,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
+        "x": 230,
         "y": 1280,
         "wires": [
             [
@@ -746,143 +974,137 @@
         ]
     },
     {
-        "id": "b164ccadeb211d80",
+        "id": "6a6abd5ae34d8cc7",
         "type": "ui-progress",
         "z": "bf2e2ec4406f5dfb",
         "group": "545970f6953b7a70",
-        "name": "",
+        "name": "Barre de progression",
         "label": "Progress",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "color": "",
         "className": "",
-        "x": 900,
-        "y": 1320,
+        "x": 840,
+        "y": 1280,
         "wires": []
     },
     {
-        "id": "95c338bedb281e80",
-        "type": "mqtt-broker",
-        "name": "MQTT",
-        "broker": "broker.emqx.io",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "545970f6953b7a70",
-        "type": "ui-group",
-        "name": "Group 1",
-        "page": "1181d1a0f64df47a",
-        "width": 6,
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
+        "id": "0302db8d1248af51",
+        "type": "ui-text",
+        "z": "bf2e2ec4406f5dfb",
+        "group": "545970f6953b7a70",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Secondes ",
+        "label": "Chronomètre de la prise de pouls",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
         "className": "",
-        "visible": true,
-        "disabled": "false",
-        "groupType": "default"
+        "value": "timeWithSeconds",
+        "valueType": "flow",
+        "x": 760,
+        "y": 1340,
+        "wires": []
     },
     {
-        "id": "335bbf8be9cdcd03",
-        "type": "ui-base",
-        "name": "My Dashboard",
-        "path": "/dashboard",
-        "appIcon": "",
-        "includeClientData": true,
-        "acceptsClientConfig": [
-            "ui-notification",
-            "ui-control"
-        ],
-        "showPathInSidebar": false,
-        "headerContent": "page",
-        "navigationStyle": "default",
-        "titleBarStyle": "default",
-        "showReconnectNotification": true,
-        "notificationDisplayTime": 1,
-        "showDisconnectNotification": true,
-        "allowInstall": false
+        "id": "a0b89867c7df2c9f",
+        "type": "function",
+        "z": "bf2e2ec4406f5dfb",
+        "name": "Filtre valeurs capteur pouls",
+        "func": "if(msg.payload > 30 && msg.payload < 150)\n{\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 740,
+        "wires": [
+            [
+                "2223b9f1a5a54d4d",
+                "65247267ce6f5306",
+                "8f9efd8954e7abd0"
+            ]
+        ]
     },
     {
-        "id": "1181d1a0f64df47a",
-        "type": "ui-page",
-        "name": "Page 1",
-        "ui": "335bbf8be9cdcd03",
-        "path": "/page1",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "8a7eee67497c3c2d",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": 0,
-                "cols": 3
-            },
-            {
-                "name": "Tablet",
-                "px": 576,
-                "cols": 6
-            },
-            {
-                "name": "Small Desktop",
-                "px": 768,
-                "cols": 9
-            },
-            {
-                "name": "Desktop",
-                "px": 1024,
-                "cols": 12
-            }
-        ],
+        "id": "c670371d6f9ae2ac",
+        "type": "ui-text-input",
+        "z": "bf2e2ec4406f5dfb",
+        "group": "545970f6953b7a70",
+        "name": "",
+        "label": "Durée de prise de pouls",
         "order": 1,
+        "width": 0,
+        "height": 0,
+        "topic": "duration",
+        "topicType": "str",
+        "mode": "number",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": false,
+        "sendOnEnter": true,
         "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 310,
+        "y": 1020,
+        "wires": [
+            [
+                "cccdb2328b23afdd",
+                "f2bc91e937b3a162"
+            ]
+        ]
     },
     {
-        "id": "8a7eee67497c3c2d",
-        "type": "ui-theme",
-        "name": "Default Theme",
-        "colors": {
-            "surface": "#ffffff",
-            "primary": "#0094ce",
-            "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
-            "groupOutline": "#cccccc"
-        },
-        "sizes": {
-            "density": "default",
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "12px"
-        }
+        "id": "cccdb2328b23afdd",
+        "type": "debug",
+        "z": "bf2e2ec4406f5dfb",
+        "name": "DUREE MAXIMUM",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 1080,
+        "wires": []
     },
     {
-        "id": "ac4d4b6cc4ccf070",
+        "id": "7f869dd5d6a041ee",
+        "type": "debug",
+        "z": "bf2e2ec4406f5dfb",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "a2d294dd367d0e8d",
         "type": "global-config",
         "env": [],
         "modules": {
