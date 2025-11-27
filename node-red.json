@@ -1,112 +1,19 @@
 [
     {
-        "id": "37d68567eea3b8a7",
+        "id": "e41511f7fea66bab",
         "type": "tab",
-        "label": "Flux 1",
+        "label": "Premiers essais",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "4436f714beca43eb",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "broker.emqx.io",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "b05bc051328cc7c2",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "broker.emqx.io",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "335bbf8be9cdcd03",
-        "type": "ui-base",
-        "name": "My Dashboard",
-        "path": "/dashboard",
-        "appIcon": "",
-        "includeClientData": true,
-        "acceptsClientConfig": [
-            "ui-notification",
-            "ui-control"
-        ],
-        "showPathInSidebar": false,
-        "headerContent": "page",
-        "navigationStyle": "default",
-        "titleBarStyle": "default",
-        "showReconnectNotification": true,
-        "notificationDisplayTime": 1,
-        "showDisconnectNotification": true,
-        "allowInstall": false
-    },
-    {
-        "id": "002edd35d1142f1d",
-        "type": "ui-theme",
-        "name": "Default Theme",
-        "colors": {
-            "surface": "#ffffff",
-            "primary": "#0094ce",
-            "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
-            "groupOutline": "#cccccc"
-        },
-        "sizes": {
-            "density": "default",
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "12px"
-        }
+        "id": "31f690d7ee5a4896",
+        "type": "tab",
+        "label": "Flux 1",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
         "id": "95c338bedb281e80",
@@ -140,12 +47,32 @@
         "sessionExpiry": ""
     },
     {
+        "id": "8c57ec7dd636743e",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
         "id": "8a7eee67497c3c2d",
         "type": "ui-theme",
         "name": "Default Theme",
         "colors": {
             "surface": "#ffffff",
-            "primary": "#0094ce",
+            "primary": "#0094CE",
             "bgPage": "#eeeeee",
             "groupBg": "#ffffff",
             "groupOutline": "#cccccc"
@@ -161,8 +88,8 @@
     {
         "id": "1181d1a0f64df47a",
         "type": "ui-page",
-        "name": "Page 1",
-        "ui": "335bbf8be9cdcd03",
+        "name": "Tableau de bord HomeTrainer",
+        "ui": "8c57ec7dd636743e",
         "path": "/page1",
         "icon": "home",
         "layout": "grid",
@@ -170,23 +97,23 @@
         "breakpoints": [
             {
                 "name": "Default",
-                "px": 0,
-                "cols": 3
+                "px": "0",
+                "cols": "3"
             },
             {
                 "name": "Tablet",
-                "px": 576,
-                "cols": 6
+                "px": "576",
+                "cols": "6"
             },
             {
                 "name": "Small Desktop",
-                "px": 768,
-                "cols": 9
+                "px": "768",
+                "cols": "9"
             },
             {
                 "name": "Desktop",
-                "px": 1024,
-                "cols": 12
+                "px": "1024",
+                "cols": "12"
             }
         ],
         "order": 1,
@@ -197,40 +124,19 @@
     {
         "id": "545970f6953b7a70",
         "type": "ui-group",
-        "name": "Group 1",
+        "name": "Mesure fréquence cardiaque",
         "page": "1181d1a0f64df47a",
         "width": 6,
         "height": 1,
-        "order": 1,
+        "order": 2,
         "showTitle": true,
         "className": "",
-        "visible": true,
+        "visible": "true",
         "disabled": "false",
         "groupType": "default"
     },
     {
-        "id": "mqtt_broker",
-        "type": "mqtt-broker",
-        "name": "MQTT Broker",
-        "broker": "broker.emqx.io",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
-        "id": "cd968893a9b63e06",
+        "id": "40f380241260898d",
         "type": "mqtt-broker",
         "name": "",
         "broker": "broker.emqx.io",
@@ -261,7 +167,7 @@
         "sessionExpiry": ""
     },
     {
-        "id": "c9990c1428e67bc6",
+        "id": "81e20ef19205ca04",
         "type": "mqtt-broker",
         "name": "",
         "broker": "broker.emqx.io",
@@ -292,7 +198,7 @@
         "sessionExpiry": ""
     },
     {
-        "id": "a756ebd41fca28b1",
+        "id": "bf0d420c83104f1f",
         "type": "ui-theme",
         "name": "Default Theme",
         "colors": {
@@ -311,7 +217,7 @@
         }
     },
     {
-        "id": "63e6435b445745cf",
+        "id": "53e64c2c60350803",
         "type": "mqtt-broker",
         "name": "MQTT Broker",
         "broker": "broker.emqx.io",
@@ -332,9 +238,288 @@
         "willPayload": ""
     },
     {
-        "id": "92aa278c0362e7c8",
+        "id": "8cbd4bd946a1b2ad",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "559d62bbdd446946",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "48f9d928ecc2f063",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "5420cf4b88cc7d63",
+        "type": "mqtt-broker",
+        "name": "MQTT Broker",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "1e35f1d5d642271c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c4b01f390d5d27bd",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1c30d01013f38a8a",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "47b9642335eaeb2a",
+        "type": "mqtt-broker",
+        "name": "MQTT Broker",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "bde96bfe50f9055f",
+        "type": "ui-spacer",
+        "group": "68f4e43f521f7cf8",
+        "name": "Premiers essais",
+        "tooltip": "",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "className": ""
+    },
+    {
+        "id": "2da34dc42fe71b58",
+        "type": "ui-page",
+        "name": "Premiers essais",
+        "ui": "8c57ec7dd636743e",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "8a7eee67497c3c2d",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "false",
+        "disabled": "false"
+    },
+    {
+        "id": "68f4e43f521f7cf8",
+        "type": "ui-group",
+        "name": "Premiers essais",
+        "page": "2da34dc42fe71b58",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": false,
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "4e083684d57c66c0",
+        "type": "ui-group",
+        "name": "Time",
+        "page": "1181d1a0f64df47a",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "87cae945b89f6311",
         "type": "inject",
-        "z": "37d68567eea3b8a7",
+        "z": "e41511f7fea66bab",
         "name": "Coucou",
         "props": [
             {
@@ -356,14 +541,14 @@
         "y": 180,
         "wires": [
             [
-                "d7c57c06e0cfef33"
+                "0a8fdb189311cb5f"
             ]
         ]
     },
     {
-        "id": "d7c57c06e0cfef33",
+        "id": "0a8fdb189311cb5f",
         "type": "debug",
-        "z": "37d68567eea3b8a7",
+        "z": "e41511f7fea66bab",
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
@@ -378,9 +563,9 @@
         "wires": []
     },
     {
-        "id": "8031545b4b37777d",
+        "id": "322dfa938b61cc13",
         "type": "function",
-        "z": "37d68567eea3b8a7",
+        "z": "e41511f7fea66bab",
         "name": "function 1",
         "func": "msg.payload = \"HEY !\"\nreturn msg;",
         "outputs": 1,
@@ -393,14 +578,14 @@
         "y": 260,
         "wires": [
             [
-                "d7c57c06e0cfef33"
+                "0a8fdb189311cb5f"
             ]
         ]
     },
     {
-        "id": "7177e9b4ecc4c77d",
+        "id": "acc2e00f2808e0e2",
         "type": "inject",
-        "z": "37d68567eea3b8a7",
+        "z": "e41511f7fea66bab",
         "name": "",
         "props": [
             {
@@ -422,14 +607,14 @@
         "y": 260,
         "wires": [
             [
-                "8031545b4b37777d"
+                "322dfa938b61cc13"
             ]
         ]
     },
     {
-        "id": "b65a55c9d8308cc9",
+        "id": "64aea7bbe91be0ca",
         "type": "mqtt in",
-        "z": "37d68567eea3b8a7",
+        "z": "e41511f7fea66bab",
         "d": true,
         "name": "",
         "topic": "homeTrainerCastres/#",
@@ -444,17 +629,17 @@
         "y": 380,
         "wires": [
             [
-                "bb11b370a1713ae8"
+                "fc765ca1b0664774"
             ]
         ]
     },
     {
-        "id": "bb11b370a1713ae8",
+        "id": "fc765ca1b0664774",
         "type": "ui-text",
-        "z": "37d68567eea3b8a7",
+        "z": "e41511f7fea66bab",
         "d": true,
         "group": "545970f6953b7a70",
-        "order": 7,
+        "order": 8,
         "width": 0,
         "height": 0,
         "name": "",
@@ -474,9 +659,9 @@
         "wires": []
     },
     {
-        "id": "9932b6fbfb58c2f5",
+        "id": "ad511564848b7bf1",
         "type": "mqtt in",
-        "z": "37d68567eea3b8a7",
+        "z": "e41511f7fea66bab",
         "d": true,
         "name": "",
         "topic": "homeTrainerCastres/Group2-A/OIIA",
@@ -491,18 +676,18 @@
         "y": 560,
         "wires": [
             [
-                "c70b31b2ebc4ab19",
-                "c55d978d7ae61daa",
-                "d7c57c06e0cfef33"
+                "3cd60c4ac2daa909",
+                "a8d55c195d3e8e86",
+                "0a8fdb189311cb5f"
             ]
         ]
     },
     {
-        "id": "c70b31b2ebc4ab19",
+        "id": "3cd60c4ac2daa909",
         "type": "ui-notification",
-        "z": "37d68567eea3b8a7",
+        "z": "e41511f7fea66bab",
         "d": true,
-        "ui": "335bbf8be9cdcd03",
+        "ui": "8c57ec7dd636743e",
         "position": "bottom right",
         "colorDefault": false,
         "color": "#9c0bd0",
@@ -523,12 +708,12 @@
         ]
     },
     {
-        "id": "c55d978d7ae61daa",
+        "id": "a8d55c195d3e8e86",
         "type": "ui-text",
-        "z": "37d68567eea3b8a7",
+        "z": "e41511f7fea66bab",
         "d": true,
         "group": "545970f6953b7a70",
-        "order": 6,
+        "order": 9,
         "width": 0,
         "height": 0,
         "name": "",
@@ -548,9 +733,9 @@
         "wires": []
     },
     {
-        "id": "b3095e5261fd0909",
+        "id": "02b7f6c3df360381",
         "type": "mqtt in",
-        "z": "37d68567eea3b8a7",
+        "z": "e41511f7fea66bab",
         "name": "",
         "topic": "homeTrainerCastres/Group2-A/Coeur",
         "qos": "2",
@@ -564,17 +749,709 @@
         "y": 740,
         "wires": [
             [
-                "a4762d34dde6f6f6"
+                "935c8845ab20a8f6",
+                "97f25a4b75aa964d",
+                "ab3032a2d87b13b6"
             ]
         ]
     },
     {
-        "id": "363fc891a4aef277",
+        "id": "935c8845ab20a8f6",
         "type": "ui-gauge",
-        "z": "37d68567eea3b8a7",
+        "z": "e41511f7fea66bab",
+        "name": "",
+        "group": "68f4e43f521f7cf8",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Battement du coeur",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "90",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "200",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 550,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e24bb1103451c95",
+        "type": "mqtt in",
+        "z": "e41511f7fea66bab",
+        "d": true,
+        "name": "",
+        "topic": "homeTrainerCastres/Group1-A/HeartBeat",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "95c338bedb281e80",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 480,
+        "wires": [
+            [
+                "bd410d1a6521b1f0"
+            ]
+        ]
+    },
+    {
+        "id": "bd410d1a6521b1f0",
+        "type": "ui-gauge",
+        "z": "e41511f7fea66bab",
+        "d": true,
         "name": "",
         "group": "545970f6953b7a70",
-        "order": 5,
+        "order": 7,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 530,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97f25a4b75aa964d",
+        "type": "ui-chart",
+        "z": "e41511f7fea66bab",
+        "group": "68f4e43f521f7cf8",
+        "name": "BPM en fonction du temps (s)",
+        "label": "chart",
+        "order": 3,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Temps (s)",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "BPM",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "200",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 590,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab3032a2d87b13b6",
+        "type": "function",
+        "z": "e41511f7fea66bab",
+        "name": "storeBpm",
+        "func": "let array = flow.get(\"bpm\");\n\narray.push(msg.payload);\n\nflow.set(\"bpm\", array);\n\nmsg.payload = array;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"bpm\", new Array());",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "bpm",
+                "module": "bpm"
+            }
+        ],
+        "x": 520,
+        "y": 900,
+        "wires": [
+            [
+                "c7429b31ce344fbd",
+                "21bf0c4966af866f"
+            ]
+        ]
+    },
+    {
+        "id": "c7429b31ce344fbd",
+        "type": "debug",
+        "z": "e41511f7fea66bab",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "21bf0c4966af866f",
+        "type": "function",
+        "z": "e41511f7fea66bab",
+        "name": "calculateAverage",
+        "func": "let array = flow.get(\"bpm\");\n\nlet total = 0;\n\nfor(let i = 0; i < array.length - 1; i++)\n{\n    total += array[i];\n}\n\nlet average = Math.round(total/array.length);\n\nflow.set(\"average\", average);\n\nmsg.payload = average;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"average\", 0);",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1020,
+        "wires": [
+            [
+                "66b54d751bd5d0ce",
+                "56eba104dbe983b2"
+            ]
+        ]
+    },
+    {
+        "id": "66b54d751bd5d0ce",
+        "type": "ui-text",
+        "z": "e41511f7fea66bab",
+        "group": "68f4e43f521f7cf8",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "displayAverage",
+        "label": "Moyenne BPM",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "average",
+        "valueType": "flow",
+        "x": 940,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "56eba104dbe983b2",
+        "type": "debug",
+        "z": "e41511f7fea66bab",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "a41f7e8fc57c8002",
+        "type": "mqtt in",
+        "z": "e41511f7fea66bab",
+        "name": "",
+        "topic": "homeTrainerCastres/Group2-A/Bouton",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "95c338bedb281e80",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 1160,
+        "wires": [
+            [
+                "bb559cdcb072b2b1",
+                "308867ed25bd94de",
+                "3ed075334cbbea71"
+            ]
+        ]
+    },
+    {
+        "id": "1ac0f1101ae1980a",
+        "type": "ui-notification",
+        "z": "e41511f7fea66bab",
+        "ui": "8c57ec7dd636743e",
+        "position": "center center",
+        "colorDefault": false,
+        "color": "#ec18d0",
+        "displayTime": "5",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "",
+        "x": 790,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb559cdcb072b2b1",
+        "type": "function",
+        "z": "e41511f7fea66bab",
+        "name": "Début prise de pouls",
+        "func": "if(msg.payload == \"Début de prise de pouls\")\n{\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1220,
+        "wires": [
+            [
+                "1ac0f1101ae1980a"
+            ]
+        ]
+    },
+    {
+        "id": "308867ed25bd94de",
+        "type": "function",
+        "z": "e41511f7fea66bab",
+        "name": "sendAverageBPMToClient",
+        "func": "if(msg.payload == \"Fin de prise de pouls\")\n{\n    let average = flow.get(\"average\");\n\n    msg.payload = average;\n    \n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1480,
+        "wires": [
+            [
+                "2ce52b8d56a91655"
+            ]
+        ]
+    },
+    {
+        "id": "5fd64e62554672f7",
+        "type": "ui-notification",
+        "z": "e41511f7fea66bab",
+        "ui": "8c57ec7dd636743e",
+        "position": "center center",
+        "colorDefault": false,
+        "color": "#f20707",
+        "displayTime": "5",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "",
+        "x": 790,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ce52b8d56a91655",
+        "type": "mqtt out",
+        "z": "e41511f7fea66bab",
+        "name": "",
+        "topic": "homeTrainerCastres/Group2-A/AverageBPM",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "95c338bedb281e80",
+        "x": 790,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "3ed075334cbbea71",
+        "type": "function",
+        "z": "e41511f7fea66bab",
+        "name": "Show end prise de pouls",
+        "func": "if(msg.payload == \"Fin de prise de pouls\")\n{    \n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1400,
+        "wires": [
+            [
+                "5fd64e62554672f7"
+            ]
+        ]
+    },
+    {
+        "id": "17212c109d88741a",
+        "type": "inject",
+        "z": "31f690d7ee5a4896",
+        "name": "Coucou",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Coucou",
+        "payloadType": "str",
+        "x": 230,
+        "y": 180,
+        "wires": [
+            [
+                "b11acaad3d79a37f"
+            ]
+        ]
+    },
+    {
+        "id": "b11acaad3d79a37f",
+        "type": "debug",
+        "z": "31f690d7ee5a4896",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "01b80140034d1ff3",
+        "type": "function",
+        "z": "31f690d7ee5a4896",
+        "name": "function 1",
+        "func": "msg.payload = \"HEY !\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 260,
+        "wires": [
+            [
+                "b11acaad3d79a37f"
+            ]
+        ]
+    },
+    {
+        "id": "d53cb12a7ca1f3cb",
+        "type": "inject",
+        "z": "31f690d7ee5a4896",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Bruh",
+        "payloadType": "str",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "01b80140034d1ff3"
+            ]
+        ]
+    },
+    {
+        "id": "941bb7eeda2566ba",
+        "type": "mqtt in",
+        "z": "31f690d7ee5a4896",
+        "d": true,
+        "name": "",
+        "topic": "homeTrainerCastres/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "95c338bedb281e80",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 380,
+        "wires": [
+            [
+                "8414a85b7b0b1e72"
+            ]
+        ]
+    },
+    {
+        "id": "8414a85b7b0b1e72",
+        "type": "ui-text",
+        "z": "31f690d7ee5a4896",
+        "d": true,
+        "group": "545970f6953b7a70",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 550,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "1b7957072a3baa8e",
+        "type": "mqtt in",
+        "z": "31f690d7ee5a4896",
+        "d": true,
+        "name": "",
+        "topic": "homeTrainerCastres/Group2-A/OIIA",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "95c338bedb281e80",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 560,
+        "wires": [
+            [
+                "4610bf695fb740ca",
+                "ae3244aec88a2788",
+                "b11acaad3d79a37f"
+            ]
+        ]
+    },
+    {
+        "id": "4610bf695fb740ca",
+        "type": "ui-notification",
+        "z": "31f690d7ee5a4896",
+        "d": true,
+        "ui": "8c57ec7dd636743e",
+        "position": "bottom right",
+        "colorDefault": false,
+        "color": "#9c0bd0",
+        "displayTime": "5",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "OIIA Notif",
+        "x": 520,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae3244aec88a2788",
+        "type": "ui-text",
+        "z": "31f690d7ee5a4896",
+        "d": true,
+        "group": "545970f6953b7a70",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "OIIA reçu !",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 530,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "3b394b33a676ea90",
+        "type": "mqtt in",
+        "z": "31f690d7ee5a4896",
+        "name": "",
+        "topic": "homeTrainerCastres/Group2-A/Coeur",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "95c338bedb281e80",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 680,
+        "wires": [
+            [
+                "7253f2b53b4d7bfd"
+            ]
+        ]
+    },
+    {
+        "id": "253678c8df601ec3",
+        "type": "ui-gauge",
+        "z": "31f690d7ee5a4896",
+        "name": "",
+        "group": "545970f6953b7a70",
+        "order": 2,
         "value": "payload",
         "valueType": "msg",
         "width": 3,
@@ -629,15 +1506,15 @@
         "styleGlow": false,
         "className": "",
         "x": 950,
-        "y": 740,
+        "y": 700,
         "wires": [
             []
         ]
     },
     {
-        "id": "ad3b4c867cdcac98",
+        "id": "fcc2a462610730a2",
         "type": "mqtt in",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "d": true,
         "name": "",
         "topic": "homeTrainerCastres/Group1-A/HeartBeat",
@@ -652,18 +1529,18 @@
         "y": 480,
         "wires": [
             [
-                "8a5cebb56c22f7ea"
+                "de724e454f04063f"
             ]
         ]
     },
     {
-        "id": "8a5cebb56c22f7ea",
+        "id": "de724e454f04063f",
         "type": "ui-gauge",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "d": true,
         "name": "",
         "group": "545970f6953b7a70",
-        "order": 8,
+        "order": 5,
         "value": "payload",
         "valueType": "msg",
         "width": 3,
@@ -712,13 +1589,13 @@
         ]
     },
     {
-        "id": "74a0d70e8945e11d",
+        "id": "6ec37f34b1b71cf1",
         "type": "ui-chart",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "group": "545970f6953b7a70",
         "name": "BPM en fonction du temps (s)",
         "label": "chart",
-        "order": 9,
+        "order": 6,
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
@@ -774,15 +1651,15 @@
         ]
     },
     {
-        "id": "abf9b04adb953e0e",
+        "id": "8f8f98f14ff480ac",
         "type": "function",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "storeBpm",
         "func": "let array = flow.get(\"bpm\");\n\narray.push(msg.payload);\n\nflow.set(\"bpm\", array);\n\nmsg.payload = array;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"bpm\", new Array());",
+        "initialize": "",
         "finalize": "",
         "libs": [
             {
@@ -790,19 +1667,19 @@
                 "module": "bpm"
             }
         ],
-        "x": 640,
-        "y": 900,
+        "x": 660,
+        "y": 880,
         "wires": [
             [
-                "e5f5c8f94da3574b",
-                "e7424fdb02c8f479"
+                "61f00765aea15a80",
+                "ab68423e4c5263b5"
             ]
         ]
     },
     {
-        "id": "e5f5c8f94da3574b",
+        "id": "61f00765aea15a80",
         "type": "debug",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "debug 2",
         "active": true,
         "tosidebar": true,
@@ -812,14 +1689,14 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
-        "y": 900,
+        "x": 1020,
+        "y": 880,
         "wires": []
     },
     {
-        "id": "e7424fdb02c8f479",
+        "id": "ab68423e4c5263b5",
         "type": "function",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "calculateAverage",
         "func": "let array = flow.get(\"bpm\");\n\nlet total = 0;\n\nfor(let i = 0; i < array.length - 1; i++)\n{\n    total += array[i];\n}\n\nlet average = Math.round(total/array.length);\n\nflow.set(\"average\", average);\n\nmsg.payload = average;\nreturn msg;",
         "outputs": 1,
@@ -828,21 +1705,21 @@
         "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"average\", 0);",
         "finalize": "",
         "libs": [],
-        "x": 750,
+        "x": 890,
         "y": 980,
         "wires": [
             [
-                "f9fa884ab9b8065a",
-                "32a291006f1f222c"
+                "58bdae23c0d8aa24",
+                "616e332627e687d6"
             ]
         ]
     },
     {
-        "id": "f9fa884ab9b8065a",
+        "id": "58bdae23c0d8aa24",
         "type": "ui-text",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "group": "545970f6953b7a70",
-        "order": 4,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "displayAverage",
@@ -857,14 +1734,14 @@
         "className": "",
         "value": "average",
         "valueType": "flow",
-        "x": 1040,
+        "x": 1220,
         "y": 940,
         "wires": []
     },
     {
-        "id": "32a291006f1f222c",
+        "id": "616e332627e687d6",
         "type": "debug",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "debug 3",
         "active": true,
         "tosidebar": true,
@@ -874,14 +1751,14 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1120,
+        "x": 1160,
         "y": 1120,
         "wires": []
     },
     {
-        "id": "0bd462ce9414e96f",
+        "id": "7d86f120100fb63b",
         "type": "mqtt in",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "",
         "topic": "homeTrainerCastres/Group2-A/Bouton",
         "qos": "2",
@@ -895,15 +1772,15 @@
         "y": 1160,
         "wires": [
             [
-                "680b41458e50e516"
+                "2648c51923478ffd"
             ]
         ]
     },
     {
-        "id": "7d3cc10535e1a05e",
+        "id": "7f93bd0971d1dd8b",
         "type": "ui-notification",
-        "z": "37d68567eea3b8a7",
-        "ui": "335bbf8be9cdcd03",
+        "z": "31f690d7ee5a4896",
+        "ui": "8c57ec7dd636743e",
         "position": "center center",
         "colorDefault": false,
         "color": "#ec18d0",
@@ -924,30 +1801,30 @@
         ]
     },
     {
-        "id": "680b41458e50e516",
+        "id": "2648c51923478ffd",
         "type": "function",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "Début prise de pouls",
-        "func": "if(msg.payload == \"Début de prise de pouls\")\n{\n    flow.set(\"applicationStopped\", false);\n    flow.set(\"stopMeasure\", false)\n    return msg;\n}",
+        "func": "if(msg.payload == \"Début de prise de pouls\")\n{\n    flow.set(\"applicationStopped\", false);\n    flow.set(\"stopMeasure\", false);\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"duration\", 0)\nflow.set(\"timePassed\", 0)",
+        "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"duration\", 0);\nflow.set(\"timePassed\", 0);\nflow.set(\"bpm\", new Array());",
         "finalize": "",
         "libs": [],
         "x": 540,
-        "y": 1200,
+        "y": 1180,
         "wires": [
             [
-                "7d3cc10535e1a05e",
-                "f2cd3f473942a4a1"
+                "7f93bd0971d1dd8b",
+                "a8a72a65ece2f488"
             ]
         ]
     },
     {
-        "id": "51c88c10e594e006",
+        "id": "f92b5bfba1a53533",
         "type": "function",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "sendAverageBPMToClient",
         "func": "if(msg.payload == \"Stop measure\")\n{\n    let average = flow.get(\"average\");\n\n    msg.payload = average;\n    \n    return msg;\n}",
         "outputs": 1,
@@ -960,15 +1837,15 @@
         "y": 1600,
         "wires": [
             [
-                "2e1495d45a8fe434"
+                "c6d8a058685b0779"
             ]
         ]
     },
     {
-        "id": "23452e3f458b95a2",
+        "id": "efbde216f3a213d1",
         "type": "ui-notification",
-        "z": "37d68567eea3b8a7",
-        "ui": "335bbf8be9cdcd03",
+        "z": "31f690d7ee5a4896",
+        "ui": "8c57ec7dd636743e",
         "position": "center center",
         "colorDefault": false,
         "color": "#f20707",
@@ -989,9 +1866,9 @@
         ]
     },
     {
-        "id": "2e1495d45a8fe434",
+        "id": "c6d8a058685b0779",
         "type": "mqtt out",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "",
         "topic": "homeTrainerCastres/Group2-A/AverageBPM",
         "qos": "2",
@@ -1007,9 +1884,9 @@
         "wires": []
     },
     {
-        "id": "c83d10252c720c85",
+        "id": "0f5cbeb96434d254",
         "type": "function",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "Show end prise de pouls",
         "func": "if(msg.payload == \"Stop measure\")\n{\n    // Message affiché dans la notif'\n    msg.payload = \"Fin de prise de pouls\";\n    return msg;\n}",
         "outputs": 1,
@@ -1022,16 +1899,16 @@
         "y": 1360,
         "wires": [
             [
-                "23452e3f458b95a2"
+                "efbde216f3a213d1"
             ]
         ]
     },
     {
-        "id": "f2cd3f473942a4a1",
+        "id": "a8a72a65ece2f488",
         "type": "function",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "Timer",
-        "func": "let timerRunning = flow.get(\"timerRunning\") || false;\nlet startTime = flow.get(\"startTime\") || 0;\nlet elapsedTime = flow.get(\"elapsedTime\") || 0;\nlet timePassed = flow.get(\"timePassed\") || 0;\n\nlet duration = parseInt(flow.get(\"duration\")) || 0;\nconsole.log(duration);\n\nlet stopMeasure = flow.get(\"stopMeasure\");\n\nif (msg.topic == \"duration\") {\n    let input = parseInt(msg.payload);\n    /*input += 1;\n    duration = input;*/\n    flow.set(\"duration\", input);\n\n    flow.set(\"currentPourcentage\", 0);\n    flow.set(\"potentialMaxReached\", 0);\n\n    // Définition du pourcentage de la progress bar\n    let pourcentageNotRounded = parseInt(100 / input);\n    console.log(\"pourcentageNotRounded : \" + pourcentageNotRounded);\n    // Arrondi avec 2 chiffres après la virgule\n    flow.set(\"pourcentageProgressBar\", pourcentageNotRounded);\n    console.log(\"updatingBar : \" + flow.get(\"updatingBar\"));\n}\n\n// Si le bouton est pressé\nif (msg.payload === \"Début de prise de pouls\") {\n    // msg.payload = 0;\n    if (!timerRunning) {\n        // démarrer le timer\n        startTime = new Date().getTime();\n        timerRunning = true;\n        elapsedTime = 0;\n        flow.set(\"updatingBar\", true);\n        console.log(\"updatingBar : \" + flow.get(\"updatingBar\"));\n    }\n}\n/*else if(msg.payload === \"Fin de prise de pouls\")\n{\n    // arrêter le timer\n    elapsedTime = new Date().getTime() - startTime;\n    timerRunning = false;\n}*/\n\nif (timerRunning) {\n    console.log(\"timmer IS RUNNING OIIA\");\n    let time = Math.floor((new Date().getTime() - startTime) / 1000);\n    console.log(\"TIME : \" + time);\n    timePassed = time;\n}\nconsole.log(\"timePassed \" + timePassed)\nconsole.log('timePassed > duration')\nconsole.log(timePassed > duration)\nif(timerRunning == true && timePassed <= duration)// Envoie le temps actuel pour affichage\n{\n    console.log(\"Coucou\");\n    let time = Math.floor((new Date().getTime() - startTime) / 1000); // secondes écoulées\n    timePassed = time;\n\n    console.log(\"TIME PASSED : \" + timePassed);\n\n    flow.set(\"timeWithSeconds\", time + \"s\");\n}\nelse if(timePassed > duration && !stopMeasure) {\n    // arrêter le timer\n    elapsedTime = new Date().getTime() - startTime;\n    timerRunning = false;\n    //timePassed = 0\n    flow.set(\"timerRunning\", false)\n    flow.set(\"stopMeasure\", true)\n    console.log(\"stop mesure\" + flow.get(\"stopMeasure\"))\n}\n\n// Sauvegarde dans flow context\nflow.set(\"timerRunning\", timerRunning);\nflow.set(\"startTime\", startTime);\nflow.set(\"elapsedTime\", elapsedTime);\nflow.set(\"timePassed\", timePassed);\n\nreturn msg;",
+        "func": "let timerRunning = flow.get(\"timerRunning\") || false;\nlet startTime = flow.get(\"startTime\") || 0;\nlet elapsedTime = flow.get(\"elapsedTime\") || 0;\nlet timePassed = flow.get(\"timePassed\") || 0;\n\nlet duration = parseInt(flow.get(\"duration\")) || 0;\nconsole.log(duration);\n\nlet stopMeasure = flow.get(\"stopMeasure\");\n\nif (msg.topic == \"duration\") {\n    let input = parseInt(msg.payload);\n    flow.set(\"duration\", input);\n\n    flow.set(\"valueProgressBar\", 0);\n\n    // Définition du pourcentage de la progress bar\n    let pourcentageProgressBar = parseFloat(100 / input);\n    console.log(\"pourcentageProgressBar : \" + pourcentageProgressBar);\n    flow.set(\"pourcentageProgressBar\", pourcentageProgressBar);\n    console.log(\"updatingBar : \" + flow.get(\"updatingBar\"));\n}\n\n// Si le bouton est pressé\nif (msg.payload === \"Début de prise de pouls\") {\n    // msg.payload = 0;\n    if (!timerRunning) {\n        // démarrer le timer\n        startTime = new Date().getTime();\n        timerRunning = true;\n        elapsedTime = 0;\n        flow.set(\"updatingBar\", true);\n        console.log(\"updatingBar : \" + flow.get(\"updatingBar\"));\n    }\n}\n/*else if(msg.payload === \"Fin de prise de pouls\")\n{\n    // arrêter le timer\n    elapsedTime = new Date().getTime() - startTime;\n    timerRunning = false;\n}*/\n\nif (timerRunning) {\n    console.log(\"timmer IS RUNNING OIIA\");\n    let time = Math.floor((new Date().getTime() - startTime) / 1000);\n    console.log(\"TIME : \" + time);\n    timePassed = time;\n}\nconsole.log(\"timePassed \" + timePassed)\nconsole.log('timePassed > duration')\nconsole.log(timePassed > duration)\nif(timerRunning == true && timePassed <= duration)// Envoie le temps actuel pour affichage\n{\n    console.log(\"Coucou\");\n    let time = Math.floor((new Date().getTime() - startTime) / 1000); // secondes écoulées\n    timePassed = time;\n\n    console.log(\"TIME PASSED : \" + timePassed);\n\n    flow.set(\"timeWithSeconds\", time + \"s\");\n}\nelse if(timePassed > duration && !stopMeasure) {\n    // arrêter le timer\n    elapsedTime = new Date().getTime() - startTime;\n    timerRunning = false;\n    //timePassed = 0\n    flow.set(\"timerRunning\", false)\n    flow.set(\"stopMeasure\", true)\n    console.log(\"stop mesure\" + flow.get(\"stopMeasure\"))\n}\n\n// Sauvegarde dans flow context\nflow.set(\"timerRunning\", timerRunning);\nflow.set(\"startTime\", startTime);\nflow.set(\"elapsedTime\", elapsedTime);\nflow.set(\"timePassed\", timePassed);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1042,17 +1919,17 @@
         "y": 1320,
         "wires": [
             [
-                "341a297acf2f956f",
-                "71eb7dcc42f0326e",
-                "fafe095dc46ac743",
-                "015cf42f4db92162"
+                "4a0786ebe91c75b3",
+                "c85dbae6f304b731",
+                "e1580f6de765c8fe",
+                "0e2458c26e94cf14"
             ]
         ]
     },
     {
-        "id": "d9908b82fc6a1874",
+        "id": "8161dec1d03afdf1",
         "type": "inject",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "",
         "props": [
             {
@@ -1070,31 +1947,31 @@
         "y": 1280,
         "wires": [
             [
-                "f2cd3f473942a4a1"
+                "a8a72a65ece2f488"
             ]
         ]
     },
     {
-        "id": "9a3c2e9c61f520df",
+        "id": "80f307f3e7cd8565",
         "type": "ui-progress",
-        "z": "37d68567eea3b8a7",
-        "group": "545970f6953b7a70",
+        "z": "31f690d7ee5a4896",
+        "group": "4e083684d57c66c0",
         "name": "Barre de progression",
         "label": "Progress",
         "order": 3,
         "width": 0,
         "height": 0,
-        "color": "",
+        "color": "blue",
         "className": "",
-        "x": 1060,
+        "x": 1100,
         "y": 1280,
         "wires": []
     },
     {
-        "id": "341a297acf2f956f",
+        "id": "4a0786ebe91c75b3",
         "type": "ui-text",
-        "z": "37d68567eea3b8a7",
-        "group": "545970f6953b7a70",
+        "z": "31f690d7ee5a4896",
+        "group": "4e083684d57c66c0",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -1115,9 +1992,9 @@
         "wires": []
     },
     {
-        "id": "a4762d34dde6f6f6",
+        "id": "7253f2b53b4d7bfd",
         "type": "function",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "Filtre valeurs capteur pouls",
         "func": "if(msg.payload > 30 && msg.payload < 150)\n{\n    return msg;\n}",
         "outputs": 1,
@@ -1127,20 +2004,20 @@
         "finalize": "",
         "libs": [],
         "x": 520,
-        "y": 740,
+        "y": 680,
         "wires": [
             [
-                "363fc891a4aef277",
-                "74a0d70e8945e11d",
-                "abf9b04adb953e0e"
+                "253678c8df601ec3",
+                "6ec37f34b1b71cf1",
+                "8f8f98f14ff480ac"
             ]
         ]
     },
     {
-        "id": "d36aa3d28eb31c1c",
+        "id": "d68fbab6747c2131",
         "type": "ui-text-input",
-        "z": "37d68567eea3b8a7",
-        "group": "545970f6953b7a70",
+        "z": "31f690d7ee5a4896",
+        "group": "4e083684d57c66c0",
         "name": "",
         "label": "Durée de prise de pouls",
         "order": 1,
@@ -1161,19 +2038,22 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 310,
+        "x": 250,
         "y": 1020,
         "wires": [
             [
-                "89fdd14e27e29f71",
-                "f2cd3f473942a4a1"
+                "d246a87825c019e3",
+                "a8a72a65ece2f488",
+                "162ff6e4b0d45381",
+                "05d981b48988975d",
+                "dbb541996a6bfdc8"
             ]
         ]
     },
     {
-        "id": "89fdd14e27e29f71",
+        "id": "d246a87825c019e3",
         "type": "debug",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "DUREE MAXIMUM",
         "active": true,
         "tosidebar": true,
@@ -1188,9 +2068,9 @@
         "wires": []
     },
     {
-        "id": "71eb7dcc42f0326e",
+        "id": "c85dbae6f304b731",
         "type": "debug",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "debug 4",
         "active": true,
         "tosidebar": true,
@@ -1205,9 +2085,9 @@
         "wires": []
     },
     {
-        "id": "208ac35a0e88b5ac",
+        "id": "5b9ac8d98101beba",
         "type": "mqtt out",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "",
         "topic": "homeTrainerCastres/Group2-A/stopMeasure",
         "qos": "",
@@ -1223,9 +2103,9 @@
         "wires": []
     },
     {
-        "id": "fafe095dc46ac743",
+        "id": "e1580f6de765c8fe",
         "type": "function",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "send stopMeasure Message to Arduino",
         "func": "let stopMeasure = flow.get(\"stopMeasure\");\nlet applicationStopped = flow.get(\"applicationStopped\");\n\n// Si on doit arrêter la mesure\n// Et que l'application n'a pas encore été arrêtée (tourne encore)\nconsole.log(\"message reçu de timer\")\nconsole.log(\"stop mesure\" + flow.get(\"stopMeasure\"))\nconsole.log(\"applicationStopped\" + applicationStopped)\nif(stopMeasure && !applicationStopped)\n{\n    console.log(\"arreter la mesure\")\n    flow.set(\"applicationStopped\", true);\n\n    msg.payload = \"Stop measure\";\n    return msg;\n}",
         "outputs": 1,
@@ -1238,18 +2118,18 @@
         "y": 1460,
         "wires": [
             [
-                "208ac35a0e88b5ac",
-                "51c88c10e594e006",
-                "c83d10252c720c85"
+                "5b9ac8d98101beba",
+                "f92b5bfba1a53533",
+                "0f5cbeb96434d254"
             ]
         ]
     },
     {
-        "id": "015cf42f4db92162",
+        "id": "0e2458c26e94cf14",
         "type": "function",
-        "z": "37d68567eea3b8a7",
+        "z": "31f690d7ee5a4896",
         "name": "Update progress bar",
-        "func": "// Float\nlet pourcentageProgressBar = flow.get(\"pourcentageProgressBar\");\nlet currentPourcentage = flow.get(\"currentPourcentage\");\n\n// Float\nlet potentialMaxReached = flow.get(\"potentialMaxReached\");\npotentialMaxReached = parseInt(currentPourcentage + pourcentageProgressBar);\nlet updatingBar = flow.get(\"updatingBar\");\n\nconsole.log(\"pourcentageProgressBar : \" + pourcentageProgressBar);\nconsole.log(\"potentialMaxReached\", potentialMaxReached);\n\nif(!updatingBar && potentialMaxReached == 0)\n{\n    msg.payload = 0;\n    return msg;\n}\nif(potentialMaxReached <= 100 && updatingBar)\n{\n    console.log(\"updateBar !!!\");\n    currentPourcentage = parseInt(currentPourcentage + pourcentageProgressBar);\n    console.log(\"currentPourcentage : \" + currentPourcentage);\n    // On update la progress bar\n    msg.payload = currentPourcentage;\n\n    flow.set(\"currentPourcentage\", currentPourcentage);\n\n    return msg;\n}\n// Si la barre ne vaut pas 100% et qu'on doit encore l'update\nelse if(potentialMaxReached > 100 && updatingBar)\n{\n    flow.set(\"updatingBar\", false);\n    msg.payload = 100;\n    return msg;\n}",
+        "func": "// Float\nlet pourcentageProgressBar = flow.get(\"pourcentageProgressBar\");\nlet timePassed = flow.get(\"timePassed\");\n\n// Float\nlet valueProgressBar = parseFloat(timePassed * pourcentageProgressBar);\nlet updatingBar = flow.get(\"updatingBar\");\n\nconsole.log(\"pourcentageProgressBar : \" + pourcentageProgressBar);\nconsole.log(\"valueProgressBar\", valueProgressBar);\n\nif (!updatingBar && valueProgressBar == 0)\n{\n    msg.payload = 0;\n    return msg;\n}\nif (valueProgressBar <= 100 && updatingBar)\n{\n    console.log(\"updateBar !!!\");\n\n    // NEW\n    console.log(\"CURRENT PROGRESS BAR VALUE : \" + valueProgressBar);\n    msg.payload = valueProgressBar;\n\n    // Change progress bar color depending on valueProgressBar\n    /*if(valueProgressBar < 33)\n    {\n        msg.ui_update = {\n            // color: \"error\"\n            color: \"blue\"\n        };\n    }\n    else if(valueProgressBar > 33 && valueProgressBar < 66)\n    {\n        msg.ui_update = {\n            // color: \"warning\"\n            color: \"pink\"\n        };\n    }\n    else if (valueProgressBar > 66) {\n        msg.ui_update = {\n            // color: \"success\"\n            color: \"purple\"\n        };\n    }*/\n\n    /*if(valueProgressBar < 50)\n    {\n        msg.ui_update = {\n            color: \"blue\"\n        };\n    }\n    else if(valueProgressBar >= 50)\n    {\n        msg.ui_update = {\n            color: \"purple\"\n        };\n    }*/\n\n    msg.ui_update = {\n        color: \"blue\"\n    }\n\n    return msg;\n}\n// Si la barre ne vaut pas 100% et qu'on doit encore l'update\nelse if (valueProgressBar > 100 && updatingBar)\n{\n    flow.set(\"updatingBar\", false);\n    msg.payload = 100;\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1260,12 +2140,72 @@
         "y": 1280,
         "wires": [
             [
-                "9a3c2e9c61f520df"
+                "80f307f3e7cd8565"
             ]
         ]
     },
     {
-        "id": "6d0eb218a39583f9",
+        "id": "162ff6e4b0d45381",
+        "type": "function",
+        "z": "31f690d7ee5a4896",
+        "name": "clearChart",
+        "func": "if(msg.topic == \"duration\")\n{\n    msg.payload = [];\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 820,
+        "wires": [
+            [
+                "6ec37f34b1b71cf1"
+            ]
+        ]
+    },
+    {
+        "id": "05d981b48988975d",
+        "type": "function",
+        "z": "31f690d7ee5a4896",
+        "name": "clear BPM",
+        "func": "if (msg.topic == \"duration\")\n{\n    msg.payload = 0;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 740,
+        "wires": [
+            [
+                "253678c8df601ec3"
+            ]
+        ]
+    },
+    {
+        "id": "dbb541996a6bfdc8",
+        "type": "function",
+        "z": "31f690d7ee5a4896",
+        "name": "clear average",
+        "func": "if (msg.topic == \"duration\")\n{\n    flow.set(\"average\", 0);\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 940,
+        "wires": [
+            [
+                "58bdae23c0d8aa24"
+            ]
+        ]
+    },
+    {
+        "id": "ee583f7b3c0a33cc",
         "type": "global-config",
         "env": [],
         "modules": {

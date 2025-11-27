@@ -317,6 +317,37 @@ int wholenote = (60000 * 4) / tempoForce;
 
 int divider = 0, noteDuration = 0;
 
+// ------------------------------------------------------------
+// STAR WARS FORCE THEME
+// ------------------------------------------------------------
+void playForceTheme()
+{
+  // iterate over the notes of the melody. 
+  // Remember, the array is twice the number of notes (notes + durations)
+  for (int thisNote = 0; thisNote < notesForce * 2; thisNote = thisNote + 2) {
+
+    // calculates the duration of each note
+    divider = melody[thisNote + 1];
+    if (divider > 0) {
+      // regular note, just proceed
+      noteDuration = (wholenote) / divider;
+    } else if (divider < 0) {
+      // dotted notes are represented with negative durations!!
+      noteDuration = (wholenote) / abs(divider);
+      noteDuration *= 1.5; // increases the duration in half for dotted notes
+    }
+
+    // we only play the note for 90% of the duration, leaving 10% as a pause
+    tone(buzzer, melody[thisNote], noteDuration*0.9);
+
+    // Wait for the specief duration before playing the next note.
+    delay(noteDuration);
+    
+    // stop the waveform generation before the next note.
+    noTone(buzzer);
+  }
+}
+
 // Function declarations
 void connectToWiFi();
 void connectToMQTTBroker();
@@ -521,30 +552,8 @@ void setup()
   // pinMode(ledPin1, OUTPUT);
   // pinMode(ledPin2,   OUTPUT);
 
-  // iterate over the notes of the melody. 
-  // Remember, the array is twice the number of notes (notes + durations)
-  /*for (int thisNote = 0; thisNote < notesForce * 2; thisNote = thisNote + 2) {
-
-    // calculates the duration of each note
-    divider = melody[thisNote + 1];
-    if (divider > 0) {
-      // regular note, just proceed
-      noteDuration = (wholenote) / divider;
-    } else if (divider < 0) {
-      // dotted notes are represented with negative durations!!
-      noteDuration = (wholenote) / abs(divider);
-      noteDuration *= 1.5; // increases the duration in half for dotted notes
-    }
-
-    // we only play the note for 90% of the duration, leaving 10% as a pause
-    tone(buzzer, melody[thisNote], noteDuration*0.9);
-
-    // Wait for the specief duration before playing the next note.
-    delay(noteDuration);
-    
-    // stop the waveform generation before the next note.
-    noTone(buzzer);
-  }
+  Serial.println("MUSIC ZELDA");
+  playZeldaMusic();
 
     // Au clair de la Lune
   // Change lune and rythmLune variables with tune and durt variables to play L'hymne à la joie
@@ -557,8 +566,6 @@ void setup()
   // delay(2000);
 
   delay(100);
-
-  */
 
   // Bouton
   pinMode(buttonPin, INPUT_PULLUP);
@@ -748,8 +755,8 @@ void loop()
     }
     else
     {
-      Serial.println("MUSIC ZELDA");
-      playZeldaMusic();
+      Serial.println("MUSIQUE THEME FORCE");
+      playForceTheme();
     }
 
     averageBPMreceived = false;
@@ -814,16 +821,19 @@ void loop()
     {
       heartRateBPM = 60000 / beatMsec;
 
-      // Light the LED when a heartbeat is detected
-      digitalWrite(ledPin, HIGH);
-      // Play a sound when a hearbeat is detected
-      tone(buzzerPin, H7, 5);
+      if(heartRateBPM > 30 || heartRateBPM < 150)
+      {
+        // Light the LED when a heartbeat is detected
+        digitalWrite(ledPin, HIGH);
+        // Play a sound when a hearbeat is detected
+        tone(buzzerPin, H7, 5);
 
-      String msgCoeur = String(heartRateBPM);
-      mqtt_client.publish(mqtt_topic5, msgCoeur.c_str());
+        String msgCoeur = String(heartRateBPM);
+        mqtt_client.publish(mqtt_topic5, msgCoeur.c_str());
 
-      Serial.print("Puls erkannt: ");
-      Serial.println(heartRateBPM);
+        Serial.print("Puls erkannt: ");
+        Serial.println(heartRateBPM);
+      }
 
       beatMsec = 0;
     }
