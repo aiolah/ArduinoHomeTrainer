@@ -1,6 +1,6 @@
 [
     {
-        "id": "bf2e2ec4406f5dfb",
+        "id": "37d68567eea3b8a7",
         "type": "tab",
         "label": "Flux 1",
         "disabled": false,
@@ -230,9 +230,111 @@
         "willPayload": ""
     },
     {
-        "id": "9b444f6d61d90976",
+        "id": "cd968893a9b63e06",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c9990c1428e67bc6",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a756ebd41fca28b1",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "63e6435b445745cf",
+        "type": "mqtt-broker",
+        "name": "MQTT Broker",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "92aa278c0362e7c8",
         "type": "inject",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "Coucou",
         "props": [
             {
@@ -254,14 +356,14 @@
         "y": 180,
         "wires": [
             [
-                "5aea2e725cf93a30"
+                "d7c57c06e0cfef33"
             ]
         ]
     },
     {
-        "id": "5aea2e725cf93a30",
+        "id": "d7c57c06e0cfef33",
         "type": "debug",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
@@ -276,9 +378,9 @@
         "wires": []
     },
     {
-        "id": "26667e07ddc94585",
+        "id": "8031545b4b37777d",
         "type": "function",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "function 1",
         "func": "msg.payload = \"HEY !\"\nreturn msg;",
         "outputs": 1,
@@ -291,14 +393,14 @@
         "y": 260,
         "wires": [
             [
-                "5aea2e725cf93a30"
+                "d7c57c06e0cfef33"
             ]
         ]
     },
     {
-        "id": "3cdd4f3781e47e3f",
+        "id": "7177e9b4ecc4c77d",
         "type": "inject",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "",
         "props": [
             {
@@ -320,14 +422,14 @@
         "y": 260,
         "wires": [
             [
-                "26667e07ddc94585"
+                "8031545b4b37777d"
             ]
         ]
     },
     {
-        "id": "4ecd7818545e9640",
+        "id": "b65a55c9d8308cc9",
         "type": "mqtt in",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "d": true,
         "name": "",
         "topic": "homeTrainerCastres/#",
@@ -342,14 +444,14 @@
         "y": 380,
         "wires": [
             [
-                "fcda51beb5819b3a"
+                "bb11b370a1713ae8"
             ]
         ]
     },
     {
-        "id": "fcda51beb5819b3a",
+        "id": "bb11b370a1713ae8",
         "type": "ui-text",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "d": true,
         "group": "545970f6953b7a70",
         "order": 7,
@@ -372,9 +474,9 @@
         "wires": []
     },
     {
-        "id": "efe871087cf9751e",
+        "id": "9932b6fbfb58c2f5",
         "type": "mqtt in",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "d": true,
         "name": "",
         "topic": "homeTrainerCastres/Group2-A/OIIA",
@@ -389,16 +491,16 @@
         "y": 560,
         "wires": [
             [
-                "0ea7465239f5f1b5",
-                "98e1d8d94565b88b",
-                "5aea2e725cf93a30"
+                "c70b31b2ebc4ab19",
+                "c55d978d7ae61daa",
+                "d7c57c06e0cfef33"
             ]
         ]
     },
     {
-        "id": "0ea7465239f5f1b5",
+        "id": "c70b31b2ebc4ab19",
         "type": "ui-notification",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "d": true,
         "ui": "335bbf8be9cdcd03",
         "position": "bottom right",
@@ -421,9 +523,9 @@
         ]
     },
     {
-        "id": "98e1d8d94565b88b",
+        "id": "c55d978d7ae61daa",
         "type": "ui-text",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "d": true,
         "group": "545970f6953b7a70",
         "order": 6,
@@ -446,9 +548,9 @@
         "wires": []
     },
     {
-        "id": "bab3d4f5b8e4e840",
+        "id": "b3095e5261fd0909",
         "type": "mqtt in",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "",
         "topic": "homeTrainerCastres/Group2-A/Coeur",
         "qos": "2",
@@ -462,14 +564,14 @@
         "y": 740,
         "wires": [
             [
-                "a0b89867c7df2c9f"
+                "a4762d34dde6f6f6"
             ]
         ]
     },
     {
-        "id": "2223b9f1a5a54d4d",
+        "id": "363fc891a4aef277",
         "type": "ui-gauge",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "",
         "group": "545970f6953b7a70",
         "order": 5,
@@ -533,9 +635,9 @@
         ]
     },
     {
-        "id": "0b407e65f2f8a3d8",
+        "id": "ad3b4c867cdcac98",
         "type": "mqtt in",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "d": true,
         "name": "",
         "topic": "homeTrainerCastres/Group1-A/HeartBeat",
@@ -550,14 +652,14 @@
         "y": 480,
         "wires": [
             [
-                "a4399ed3bec1ed62"
+                "8a5cebb56c22f7ea"
             ]
         ]
     },
     {
-        "id": "a4399ed3bec1ed62",
+        "id": "8a5cebb56c22f7ea",
         "type": "ui-gauge",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "d": true,
         "name": "",
         "group": "545970f6953b7a70",
@@ -610,9 +712,9 @@
         ]
     },
     {
-        "id": "65247267ce6f5306",
+        "id": "74a0d70e8945e11d",
         "type": "ui-chart",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "group": "545970f6953b7a70",
         "name": "BPM en fonction du temps (s)",
         "label": "chart",
@@ -672,9 +774,9 @@
         ]
     },
     {
-        "id": "8f9efd8954e7abd0",
+        "id": "abf9b04adb953e0e",
         "type": "function",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "storeBpm",
         "func": "let array = flow.get(\"bpm\");\n\narray.push(msg.payload);\n\nflow.set(\"bpm\", array);\n\nmsg.payload = array;\n\nreturn msg;",
         "outputs": 1,
@@ -692,15 +794,15 @@
         "y": 900,
         "wires": [
             [
-                "f98fe66a8963fb91",
-                "2e09f74a88d4b1ed"
+                "e5f5c8f94da3574b",
+                "e7424fdb02c8f479"
             ]
         ]
     },
     {
-        "id": "f98fe66a8963fb91",
+        "id": "e5f5c8f94da3574b",
         "type": "debug",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "debug 2",
         "active": true,
         "tosidebar": true,
@@ -715,9 +817,9 @@
         "wires": []
     },
     {
-        "id": "2e09f74a88d4b1ed",
+        "id": "e7424fdb02c8f479",
         "type": "function",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "calculateAverage",
         "func": "let array = flow.get(\"bpm\");\n\nlet total = 0;\n\nfor(let i = 0; i < array.length - 1; i++)\n{\n    total += array[i];\n}\n\nlet average = Math.round(total/array.length);\n\nflow.set(\"average\", average);\n\nmsg.payload = average;\nreturn msg;",
         "outputs": 1,
@@ -726,19 +828,19 @@
         "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"average\", 0);",
         "finalize": "",
         "libs": [],
-        "x": 790,
-        "y": 1020,
+        "x": 750,
+        "y": 980,
         "wires": [
             [
-                "f816ec0ae5731e9b",
-                "6acb1b2e17fd9a6e"
+                "f9fa884ab9b8065a",
+                "32a291006f1f222c"
             ]
         ]
     },
     {
-        "id": "f816ec0ae5731e9b",
+        "id": "f9fa884ab9b8065a",
         "type": "ui-text",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "group": "545970f6953b7a70",
         "order": 4,
         "width": 0,
@@ -756,13 +858,13 @@
         "value": "average",
         "valueType": "flow",
         "x": 1040,
-        "y": 980,
+        "y": 940,
         "wires": []
     },
     {
-        "id": "6acb1b2e17fd9a6e",
+        "id": "32a291006f1f222c",
         "type": "debug",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "debug 3",
         "active": true,
         "tosidebar": true,
@@ -772,14 +874,14 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1020,
-        "y": 1080,
+        "x": 1120,
+        "y": 1120,
         "wires": []
     },
     {
-        "id": "92826e4981958d86",
+        "id": "0bd462ce9414e96f",
         "type": "mqtt in",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "",
         "topic": "homeTrainerCastres/Group2-A/Bouton",
         "qos": "2",
@@ -793,17 +895,14 @@
         "y": 1160,
         "wires": [
             [
-                "1a646d438927ef81",
-                "5c87394eea679ba6",
-                "7172988423c3a2b1",
-                "f2bc91e937b3a162"
+                "680b41458e50e516"
             ]
         ]
     },
     {
-        "id": "1488843d999713ea",
+        "id": "7d3cc10535e1a05e",
         "type": "ui-notification",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "ui": "335bbf8be9cdcd03",
         "position": "center center",
         "colorDefault": false,
@@ -825,49 +924,50 @@
         ]
     },
     {
-        "id": "1a646d438927ef81",
+        "id": "680b41458e50e516",
         "type": "function",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "Début prise de pouls",
-        "func": "if(msg.payload == \"Début de prise de pouls\")\n{\n    return msg;\n}",
+        "func": "if(msg.payload == \"Début de prise de pouls\")\n{\n    flow.set(\"applicationStopped\", false);\n    flow.set(\"stopMeasure\", false)\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "",
+        "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"duration\", 0)\nflow.set(\"timePassed\", 0)",
         "finalize": "",
         "libs": [],
-        "x": 560,
+        "x": 540,
         "y": 1200,
         "wires": [
             [
-                "1488843d999713ea"
+                "7d3cc10535e1a05e",
+                "f2cd3f473942a4a1"
             ]
         ]
     },
     {
-        "id": "5c87394eea679ba6",
+        "id": "51c88c10e594e006",
         "type": "function",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "sendAverageBPMToClient",
-        "func": "if(msg.payload == \"Fin de prise de pouls\")\n{\n    let average = flow.get(\"average\");\n\n    msg.payload = average;\n    \n    return msg;\n}",
+        "func": "if(msg.payload == \"Stop measure\")\n{\n    let average = flow.get(\"average\");\n\n    msg.payload = average;\n    \n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 1480,
+        "x": 1090,
+        "y": 1600,
         "wires": [
             [
-                "445e409db9213277"
+                "2e1495d45a8fe434"
             ]
         ]
     },
     {
-        "id": "ac6bbfb115741578",
+        "id": "23452e3f458b95a2",
         "type": "ui-notification",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "ui": "335bbf8be9cdcd03",
         "position": "center center",
         "colorDefault": false,
@@ -882,16 +982,16 @@
         "raw": false,
         "className": "",
         "name": "",
-        "x": 850,
-        "y": 1400,
+        "x": 1370,
+        "y": 1360,
         "wires": [
             []
         ]
     },
     {
-        "id": "445e409db9213277",
+        "id": "2e1495d45a8fe434",
         "type": "mqtt out",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "",
         "topic": "homeTrainerCastres/Group2-A/AverageBPM",
         "qos": "2",
@@ -902,56 +1002,57 @@
         "correl": "",
         "expiry": "",
         "broker": "95c338bedb281e80",
-        "x": 790,
-        "y": 1540,
+        "x": 1430,
+        "y": 1600,
         "wires": []
     },
     {
-        "id": "7172988423c3a2b1",
+        "id": "c83d10252c720c85",
         "type": "function",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "Show end prise de pouls",
-        "func": "if(msg.payload == \"Fin de prise de pouls\")\n{    \n    return msg;\n}",
+        "func": "if(msg.payload == \"Stop measure\")\n{\n    // Message affiché dans la notif'\n    msg.payload = \"Fin de prise de pouls\";\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 1360,
+        "wires": [
+            [
+                "23452e3f458b95a2"
+            ]
+        ]
+    },
+    {
+        "id": "f2cd3f473942a4a1",
+        "type": "function",
+        "z": "37d68567eea3b8a7",
+        "name": "Timer",
+        "func": "let timerRunning = flow.get(\"timerRunning\") || false;\nlet startTime = flow.get(\"startTime\") || 0;\nlet elapsedTime = flow.get(\"elapsedTime\") || 0;\nlet timePassed = flow.get(\"timePassed\") || 0;\n\nlet duration = parseInt(flow.get(\"duration\")) || 0;\nconsole.log(duration);\n\nlet stopMeasure = flow.get(\"stopMeasure\");\n\nif (msg.topic == \"duration\") {\n    let input = parseInt(msg.payload);\n    /*input += 1;\n    duration = input;*/\n    flow.set(\"duration\", input);\n\n    flow.set(\"currentPourcentage\", 0);\n    flow.set(\"potentialMaxReached\", 0);\n\n    // Définition du pourcentage de la progress bar\n    let pourcentageNotRounded = parseInt(100 / input);\n    console.log(\"pourcentageNotRounded : \" + pourcentageNotRounded);\n    // Arrondi avec 2 chiffres après la virgule\n    flow.set(\"pourcentageProgressBar\", pourcentageNotRounded);\n    console.log(\"updatingBar : \" + flow.get(\"updatingBar\"));\n}\n\n// Si le bouton est pressé\nif (msg.payload === \"Début de prise de pouls\") {\n    // msg.payload = 0;\n    if (!timerRunning) {\n        // démarrer le timer\n        startTime = new Date().getTime();\n        timerRunning = true;\n        elapsedTime = 0;\n        flow.set(\"updatingBar\", true);\n        console.log(\"updatingBar : \" + flow.get(\"updatingBar\"));\n    }\n}\n/*else if(msg.payload === \"Fin de prise de pouls\")\n{\n    // arrêter le timer\n    elapsedTime = new Date().getTime() - startTime;\n    timerRunning = false;\n}*/\n\nif (timerRunning) {\n    console.log(\"timmer IS RUNNING OIIA\");\n    let time = Math.floor((new Date().getTime() - startTime) / 1000);\n    console.log(\"TIME : \" + time);\n    timePassed = time;\n}\nconsole.log(\"timePassed \" + timePassed)\nconsole.log('timePassed > duration')\nconsole.log(timePassed > duration)\nif(timerRunning == true && timePassed <= duration)// Envoie le temps actuel pour affichage\n{\n    console.log(\"Coucou\");\n    let time = Math.floor((new Date().getTime() - startTime) / 1000); // secondes écoulées\n    timePassed = time;\n\n    console.log(\"TIME PASSED : \" + timePassed);\n\n    flow.set(\"timeWithSeconds\", time + \"s\");\n}\nelse if(timePassed > duration && !stopMeasure) {\n    // arrêter le timer\n    elapsedTime = new Date().getTime() - startTime;\n    timerRunning = false;\n    //timePassed = 0\n    flow.set(\"timerRunning\", false)\n    flow.set(\"stopMeasure\", true)\n    console.log(\"stop mesure\" + flow.get(\"stopMeasure\"))\n}\n\n// Sauvegarde dans flow context\nflow.set(\"timerRunning\", timerRunning);\nflow.set(\"startTime\", startTime);\nflow.set(\"elapsedTime\", elapsedTime);\nflow.set(\"timePassed\", timePassed);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"pourcentageProgressBar\", 0);\nflow.set(\"updatingBar\", false);",
+        "finalize": "// Le code ajouté ici sera exécuté lorsque le\n// noeud sera arrêté ou redéployé.\n// Pour définir le temps à 0 au déploiement du noeud !\nflow.set(\"timeWithSeconds\", \"0s\");\n\n// Pas sûre qu'il y ait besoin de return msg; | A tester\n// return msg;",
         "libs": [],
         "x": 490,
-        "y": 1400,
+        "y": 1320,
         "wires": [
             [
-                "ac6bbfb115741578"
+                "341a297acf2f956f",
+                "71eb7dcc42f0326e",
+                "fafe095dc46ac743",
+                "015cf42f4db92162"
             ]
         ]
     },
     {
-        "id": "f2bc91e937b3a162",
-        "type": "function",
-        "z": "bf2e2ec4406f5dfb",
-        "name": "Timer",
-        "func": "let timerRunning = flow.get(\"timerRunning\") || false;\nlet startTime = flow.get(\"startTime\") || 0;\nlet elapsedTime = flow.get(\"elapsedTime\") || 0;\nlet timePassed = flow.get(\"timePassed\") || 0;\n\nlet duration = flow.get(\"duration\") || 0;\nconsole.log(duration);\n\nif(msg.topic == \"duration\")\n{\n    let input = parseInt(msg.payload);\n    input += 1;\n    duration = input;\n    flow.set(\"duration\", duration);\n}\n\n// Si le bouton est pressé\nif(msg.payload === \"Début de prise de pouls\") {\n    // msg.payload = 0;\n    if(!timerRunning) {\n        // démarrer le timer\n        startTime = new Date().getTime();\n        timerRunning = true;\n        elapsedTime = 0;\n    }\n}\nelse if(msg.payload === \"Fin de prise de pouls\")\n{\n    // arrêter le timer\n    elapsedTime = new Date().getTime() - startTime;\n    timerRunning = false;\n}\n\nif(timerRunning)\n{\n    console.log(\"timmer IS RUNNING OIIA\");\n    let time = Math.floor((new Date().getTime() - startTime) / 1000);\n    console.log(\"TIME : \" + time);\n    timePassed = time;\n}\n\nif(timerRunning == true && timePassed < duration)// Envoie le temps actuel pour affichage\n{\n    console.log(\"Coucou\");\n    let time = Math.floor((new Date().getTime() - startTime) / 1000); // secondes écoulées\n    timePassed = time;\n\n    console.log(\"TIME PASSED : \" + timePassed);\n\n    flow.set(\"timeWithSeconds\", time + \"s\");\n}\n\n// Sauvegarde dans flow context\nflow.set(\"timerRunning\", timerRunning);\nflow.set(\"startTime\", startTime);\nflow.set(\"elapsedTime\", elapsedTime);\nflow.set(\"timePassed\", timePassed);\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 1280,
-        "wires": [
-            [
-                "6a6abd5ae34d8cc7",
-                "0302db8d1248af51",
-                "7f869dd5d6a041ee"
-            ]
-        ]
-    },
-    {
-        "id": "1b23bf404c6157fc",
+        "id": "d9908b82fc6a1874",
         "type": "inject",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "",
         "props": [
             {
@@ -969,14 +1070,14 @@
         "y": 1280,
         "wires": [
             [
-                "f2bc91e937b3a162"
+                "f2cd3f473942a4a1"
             ]
         ]
     },
     {
-        "id": "6a6abd5ae34d8cc7",
+        "id": "9a3c2e9c61f520df",
         "type": "ui-progress",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "group": "545970f6953b7a70",
         "name": "Barre de progression",
         "label": "Progress",
@@ -985,14 +1086,14 @@
         "height": 0,
         "color": "",
         "className": "",
-        "x": 840,
+        "x": 1060,
         "y": 1280,
         "wires": []
     },
     {
-        "id": "0302db8d1248af51",
+        "id": "341a297acf2f956f",
         "type": "ui-text",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "group": "545970f6953b7a70",
         "order": 2,
         "width": 0,
@@ -1010,13 +1111,13 @@
         "value": "timeWithSeconds",
         "valueType": "flow",
         "x": 760,
-        "y": 1340,
+        "y": 1360,
         "wires": []
     },
     {
-        "id": "a0b89867c7df2c9f",
+        "id": "a4762d34dde6f6f6",
         "type": "function",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "Filtre valeurs capteur pouls",
         "func": "if(msg.payload > 30 && msg.payload < 150)\n{\n    return msg;\n}",
         "outputs": 1,
@@ -1029,16 +1130,16 @@
         "y": 740,
         "wires": [
             [
-                "2223b9f1a5a54d4d",
-                "65247267ce6f5306",
-                "8f9efd8954e7abd0"
+                "363fc891a4aef277",
+                "74a0d70e8945e11d",
+                "abf9b04adb953e0e"
             ]
         ]
     },
     {
-        "id": "c670371d6f9ae2ac",
+        "id": "d36aa3d28eb31c1c",
         "type": "ui-text-input",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "group": "545970f6953b7a70",
         "name": "",
         "label": "Durée de prise de pouls",
@@ -1064,15 +1165,15 @@
         "y": 1020,
         "wires": [
             [
-                "cccdb2328b23afdd",
-                "f2bc91e937b3a162"
+                "89fdd14e27e29f71",
+                "f2cd3f473942a4a1"
             ]
         ]
     },
     {
-        "id": "cccdb2328b23afdd",
+        "id": "89fdd14e27e29f71",
         "type": "debug",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "DUREE MAXIMUM",
         "active": true,
         "tosidebar": true,
@@ -1087,9 +1188,9 @@
         "wires": []
     },
     {
-        "id": "7f869dd5d6a041ee",
+        "id": "71eb7dcc42f0326e",
         "type": "debug",
-        "z": "bf2e2ec4406f5dfb",
+        "z": "37d68567eea3b8a7",
         "name": "debug 4",
         "active": true,
         "tosidebar": true,
@@ -1100,11 +1201,71 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 840,
-        "y": 1140,
+        "y": 1100,
         "wires": []
     },
     {
-        "id": "a2d294dd367d0e8d",
+        "id": "208ac35a0e88b5ac",
+        "type": "mqtt out",
+        "z": "37d68567eea3b8a7",
+        "name": "",
+        "topic": "homeTrainerCastres/Group2-A/stopMeasure",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "95c338bedb281e80",
+        "x": 1250,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "fafe095dc46ac743",
+        "type": "function",
+        "z": "37d68567eea3b8a7",
+        "name": "send stopMeasure Message to Arduino",
+        "func": "let stopMeasure = flow.get(\"stopMeasure\");\nlet applicationStopped = flow.get(\"applicationStopped\");\n\n// Si on doit arrêter la mesure\n// Et que l'application n'a pas encore été arrêtée (tourne encore)\nconsole.log(\"message reçu de timer\")\nconsole.log(\"stop mesure\" + flow.get(\"stopMeasure\"))\nconsole.log(\"applicationStopped\" + applicationStopped)\nif(stopMeasure && !applicationStopped)\n{\n    console.log(\"arreter la mesure\")\n    flow.set(\"applicationStopped\", true);\n\n    msg.payload = \"Stop measure\";\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1460,
+        "wires": [
+            [
+                "208ac35a0e88b5ac",
+                "51c88c10e594e006",
+                "c83d10252c720c85"
+            ]
+        ]
+    },
+    {
+        "id": "015cf42f4db92162",
+        "type": "function",
+        "z": "37d68567eea3b8a7",
+        "name": "Update progress bar",
+        "func": "// Float\nlet pourcentageProgressBar = flow.get(\"pourcentageProgressBar\");\nlet currentPourcentage = flow.get(\"currentPourcentage\");\n\n// Float\nlet potentialMaxReached = flow.get(\"potentialMaxReached\");\npotentialMaxReached = parseInt(currentPourcentage + pourcentageProgressBar);\nlet updatingBar = flow.get(\"updatingBar\");\n\nconsole.log(\"pourcentageProgressBar : \" + pourcentageProgressBar);\nconsole.log(\"potentialMaxReached\", potentialMaxReached);\n\nif(!updatingBar && potentialMaxReached == 0)\n{\n    msg.payload = 0;\n    return msg;\n}\nif(potentialMaxReached <= 100 && updatingBar)\n{\n    console.log(\"updateBar !!!\");\n    currentPourcentage = parseInt(currentPourcentage + pourcentageProgressBar);\n    console.log(\"currentPourcentage : \" + currentPourcentage);\n    // On update la progress bar\n    msg.payload = currentPourcentage;\n\n    flow.set(\"currentPourcentage\", currentPourcentage);\n\n    return msg;\n}\n// Si la barre ne vaut pas 100% et qu'on doit encore l'update\nelse if(potentialMaxReached > 100 && updatingBar)\n{\n    flow.set(\"updatingBar\", false);\n    msg.payload = 100;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1280,
+        "wires": [
+            [
+                "9a3c2e9c61f520df"
+            ]
+        ]
+    },
+    {
+        "id": "6d0eb218a39583f9",
         "type": "global-config",
         "env": [],
         "modules": {

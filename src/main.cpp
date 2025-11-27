@@ -15,6 +15,7 @@ const char *mqtt_topic4 = "homeTrainerCastres/Group2-A/OIIA";
 const char *mqtt_topic5 = "homeTrainerCastres/Group2-A/Coeur";
 const char *mqtt_topic6 = "homeTrainerCastres/Group2-A/Bouton";
 const char *mqtt_topic7 = "homeTrainerCastres/Group2-A/AverageBPM";
+const char *mqtt_topic8 = "homeTrainerCastres/Group2-A/stopMeasure";
 const int mqtt_port = 1883;
 
 String client_id = "ArduinoClient-";
@@ -34,6 +35,7 @@ bool averageBPMreceived = false;
 // Bouton
 int buttonPin = 10;
 int buttonPressedCounter = 0;
+bool measureStarted = false;
 
 int buttonState;            // the current reading from the input pin
 int lastButtonState = HIGH;  // the previous reading from the input pin
@@ -633,6 +635,7 @@ void connectToMQTTBroker()
       mqtt_client.subscribe(mqtt_topic5);
       mqtt_client.subscribe(mqtt_topic6);
       mqtt_client.subscribe(mqtt_topic7);
+      mqtt_client.subscribe(mqtt_topic8);
 
       String message = "Hello EMQX I'm " + client_id;
       mqtt_client.publish(mqtt_topic1, message.c_str());
@@ -674,6 +677,12 @@ void mqttCallback(char *topic, byte *payload, unsigned int length)
     Serial.println("______________AVERAGE BPM______________");
     averageBPM = messageTemp.toInt();
     averageBPMreceived = true;
+  }
+
+  if(String(topic) == String(mqtt_topic8) && messageTemp == "Stop measure")
+  {
+    Serial.println("__________STOP MEASURE BPM____________");
+    measureStarted = false;
   }
 }
 
@@ -778,27 +787,28 @@ void loop()
   // Bouton
   if(readingButton == LOW)
   {
-    buttonPressedCounter++;
+    // buttonPressedCounter++;
+    measureStarted = true;
 
-    if(buttonPressedCounter % 2 != 0)
-    {
+    /*if(buttonPressedCounter % 2 != 0)
+    {*/
       mqtt_client.publish(mqtt_topic6, "Début de prise de pouls");
       Serial.println("Average BPM : " + averageBPM);
-    }
+    /*}
     else
     {
       mqtt_client.publish(mqtt_topic6, "Fin de prise de pouls");
       Serial.println("Average BPM : " + averageBPM);
-    }
+    }*/
     
     Serial.println("Bouton appuyé !");
     digitalWrite(buttonPin, HIGH);
 
-    Serial.println(buttonPressedCounter);
+    // Serial.println(buttonPressedCounter);
   }
 
   // Heartbeat detection
-  if(buttonPressedCounter % 2 != 0)
+  if(measureStarted)
   {
     if(heartbeatDetected(analogPin, delayMsec))
     {
@@ -834,7 +844,7 @@ void loop()
     String MAC = printMacAddress();
     String MACmsg = "Adresse MAC " + MAC;
 
-    String MAC_OIIA = "OIIA ᓚᘏᗢ MAC Address : " + printMacAddress();
+    String MAC_OIIA = "OIIA á“šá˜á—¢ MAC Address : " + printMacAddress();
 
     // Uncomment if needed
     // mqtt_client.publish(mqtt_topic3, MACmsg.c_str());
