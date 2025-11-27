@@ -34,7 +34,6 @@ bool averageBPMreceived = false;
 
 // Bouton
 int buttonPin = 10;
-int buttonPressedCounter = 0;
 bool measureStarted = false;
 
 int buttonState;            // the current reading from the input pin
@@ -138,7 +137,6 @@ int tonepin = 7;
  */
   
 int speakerPin = 7;
-const int switchPin = 1;
 
 char notes[] = "gabygabyxzCDxzCDabywabywzCDEzCDEbywFCDEqywFGDEqi        azbC"; // a space represents a rest
 int length = sizeof(notes); // the number of notes
@@ -169,8 +167,6 @@ const int aH = 880;
 const int buzzerPin = 7;
 const int ledPin1 = 12;
 const int ledPin2   = 13;
- 
-int counter = 0;
 
 // Star Wars - Force theme
 /* 
@@ -382,22 +378,18 @@ void playZeldaMusic()
 {
   // Zelda music
     pinMode(speakerPin, OUTPUT);
-    // if (digitalRead(switchPin) == 1)
-    // {
-      for (int i = 0; i < length; i++)
+    for (int i = 0; i < length; i++)
+    {
+      if (notes[i] == ' ')
       {
-        if (notes[i] == ' ')
-        {
-          delay(beats[i] * tempo); // rest
-        }
-        else
-        {
-          playNote(notes[i], beats[i] * tempo);
-        }
-      
-      // pause between notes
-      delay(tempo / 2); 
-    // }
+        delay(beats[i] * tempo); // rest
+      }
+      else
+      {
+        playNote(notes[i], beats[i] * tempo);
+      }
+    
+    delay(tempo / 2);
   }
 }
 
@@ -408,28 +400,12 @@ void beep(int note, int duration)
 {
   //Play tone on buzzerPin
   tone(buzzerPin, note);
- 
-  //Play different LED depending on value of 'counter'
-  // if(counter % 2 == 0)
-  // {
-  //   // digitalWrite(ledPin1, HIGH);
-  //   delay(duration);
-  //   //  digitalWrite(ledPin1, LOW);
-  // }
-  // else
-  // {
-  //   // digitalWrite(ledPin2, HIGH);
-  //   delay(duration);
-  //   // digitalWrite(ledPin2, LOW);
-  // }
+
   delay(duration); // maintain the tone for 'duration' milliseconds
   //Stop   tone on buzzerPin
   noTone(buzzerPin);
  
   delay(duration * 0.30);
- 
-  //Increment   counter
-  counter++;
 }
  
 void firstSection()
@@ -538,19 +514,12 @@ void setup()
 
   Serial.println("Heartbeat Detektion Beispielcode.");
 
-  // Buzzer L'hymne à la joie
-  // pinMode(tonepin, OUTPUT);
+  // L'hymne à la joie
   // length = sizeof(tune)/sizeof(tune[0]);
-
-  // Buzzer Zelda music
-  pinMode(switchPin, INPUT);
-  digitalWrite(switchPin, HIGH);
 
   // Star Wars music
   //Setup pin modes
   pinMode(buzzerPin, OUTPUT);
-  // pinMode(ledPin1, OUTPUT);
-  // pinMode(ledPin2,   OUTPUT);
 
   Serial.println("MUSIC ZELDA");
   playZeldaMusic();
@@ -794,24 +763,13 @@ void loop()
   // Bouton
   if(readingButton == LOW)
   {
-    // buttonPressedCounter++;
     measureStarted = true;
 
-    /*if(buttonPressedCounter % 2 != 0)
-    {*/
-      mqtt_client.publish(mqtt_topic6, "Début de prise de pouls");
-      Serial.println("Average BPM : " + averageBPM);
-    /*}
-    else
-    {
-      mqtt_client.publish(mqtt_topic6, "Fin de prise de pouls");
-      Serial.println("Average BPM : " + averageBPM);
-    }*/
-    
+    mqtt_client.publish(mqtt_topic6, "Début de prise de pouls");
+    Serial.println("Average BPM : " + averageBPM);
+
     Serial.println("Bouton appuyé !");
     digitalWrite(buttonPin, HIGH);
-
-    // Serial.println(buttonPressedCounter);
   }
 
   // Heartbeat detection
@@ -821,7 +779,7 @@ void loop()
     {
       heartRateBPM = 60000 / beatMsec;
 
-      if(heartRateBPM > 30 || heartRateBPM < 150)
+      if(heartRateBPM > 30 && heartRateBPM < 150)
       {
         // Light the LED when a heartbeat is detected
         digitalWrite(ledPin, HIGH);

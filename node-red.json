@@ -1,16 +1,8 @@
 [
     {
-        "id": "e41511f7fea66bab",
-        "type": "tab",
-        "label": "Premiers essais",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "31f690d7ee5a4896",
         "type": "tab",
-        "label": "Flux 1",
+        "label": "HomeTrainer | Groupe 2 - A",
         "disabled": false,
         "info": "",
         "env": []
@@ -118,8 +110,8 @@
         ],
         "order": 1,
         "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "visible": true,
+        "disabled": false
     },
     {
         "id": "545970f6953b7a70",
@@ -442,17 +434,6 @@
         "willPayload": ""
     },
     {
-        "id": "bde96bfe50f9055f",
-        "type": "ui-spacer",
-        "group": "68f4e43f521f7cf8",
-        "name": "Premiers essais",
-        "tooltip": "",
-        "order": 1,
-        "width": 1,
-        "height": 1,
-        "className": ""
-    },
-    {
         "id": "2da34dc42fe71b58",
         "type": "ui-page",
         "name": "Premiers essais",
@@ -517,696 +498,15 @@
         "groupType": "default"
     },
     {
-        "id": "87cae945b89f6311",
-        "type": "inject",
-        "z": "e41511f7fea66bab",
-        "name": "Coucou",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Coucou",
-        "payloadType": "str",
-        "x": 230,
-        "y": 180,
-        "wires": [
-            [
-                "0a8fdb189311cb5f"
-            ]
-        ]
-    },
-    {
-        "id": "0a8fdb189311cb5f",
-        "type": "debug",
-        "z": "e41511f7fea66bab",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 500,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "322dfa938b61cc13",
-        "type": "function",
-        "z": "e41511f7fea66bab",
-        "name": "function 1",
-        "func": "msg.payload = \"HEY !\"\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 300,
-        "y": 260,
-        "wires": [
-            [
-                "0a8fdb189311cb5f"
-            ]
-        ]
-    },
-    {
-        "id": "acc2e00f2808e0e2",
-        "type": "inject",
-        "z": "e41511f7fea66bab",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Bruh",
-        "payloadType": "str",
-        "x": 110,
-        "y": 260,
-        "wires": [
-            [
-                "322dfa938b61cc13"
-            ]
-        ]
-    },
-    {
-        "id": "64aea7bbe91be0ca",
-        "type": "mqtt in",
-        "z": "e41511f7fea66bab",
-        "d": true,
-        "name": "",
-        "topic": "homeTrainerCastres/#",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "95c338bedb281e80",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 140,
-        "y": 380,
-        "wires": [
-            [
-                "fc765ca1b0664774"
-            ]
-        ]
-    },
-    {
-        "id": "fc765ca1b0664774",
-        "type": "ui-text",
-        "z": "e41511f7fea66bab",
-        "d": true,
-        "group": "545970f6953b7a70",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 550,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "ad511564848b7bf1",
-        "type": "mqtt in",
-        "z": "e41511f7fea66bab",
-        "d": true,
-        "name": "",
-        "topic": "homeTrainerCastres/Group2-A/OIIA",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "95c338bedb281e80",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 180,
-        "y": 560,
-        "wires": [
-            [
-                "3cd60c4ac2daa909",
-                "a8d55c195d3e8e86",
-                "0a8fdb189311cb5f"
-            ]
-        ]
-    },
-    {
-        "id": "3cd60c4ac2daa909",
-        "type": "ui-notification",
-        "z": "e41511f7fea66bab",
-        "d": true,
-        "ui": "8c57ec7dd636743e",
-        "position": "bottom right",
-        "colorDefault": false,
-        "color": "#9c0bd0",
-        "displayTime": "5",
-        "showCountdown": true,
-        "outputs": 1,
-        "allowDismiss": true,
-        "dismissText": "Close",
-        "allowConfirm": false,
-        "confirmText": "Confirm",
-        "raw": false,
-        "className": "",
-        "name": "OIIA Notif",
-        "x": 520,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a8d55c195d3e8e86",
-        "type": "ui-text",
-        "z": "e41511f7fea66bab",
-        "d": true,
-        "group": "545970f6953b7a70",
-        "order": 9,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "OIIA reçu !",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 530,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "02b7f6c3df360381",
-        "type": "mqtt in",
-        "z": "e41511f7fea66bab",
-        "name": "",
-        "topic": "homeTrainerCastres/Group2-A/Coeur",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "95c338bedb281e80",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 190,
-        "y": 740,
-        "wires": [
-            [
-                "935c8845ab20a8f6",
-                "97f25a4b75aa964d",
-                "ab3032a2d87b13b6"
-            ]
-        ]
-    },
-    {
-        "id": "935c8845ab20a8f6",
-        "type": "ui-gauge",
-        "z": "e41511f7fea66bab",
-        "name": "",
+        "id": "bde96bfe50f9055f",
+        "type": "ui-spacer",
         "group": "68f4e43f521f7cf8",
-        "order": 2,
-        "value": "payload",
-        "valueType": "msg",
-        "width": 3,
-        "height": 3,
-        "gtype": "gauge-half",
-        "gstyle": "needle",
-        "title": "Battement du coeur",
-        "alwaysShowTitle": false,
-        "floatingTitlePosition": "top-left",
-        "units": "units",
-        "icon": "",
-        "prefix": "",
-        "suffix": "",
-        "segments": [
-            {
-                "from": "0",
-                "color": "#ffc800",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "60",
-                "color": "#5cd65c",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "80",
-                "color": "#ffc800",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "90",
-                "color": "#ea5353",
-                "text": "",
-                "textType": "label"
-            }
-        ],
-        "min": 0,
-        "max": "200",
-        "sizeThickness": 16,
-        "sizeGap": 4,
-        "sizeKeyThickness": 8,
-        "styleRounded": true,
-        "styleGlow": false,
-        "className": "",
-        "x": 550,
-        "y": 740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5e24bb1103451c95",
-        "type": "mqtt in",
-        "z": "e41511f7fea66bab",
-        "d": true,
-        "name": "",
-        "topic": "homeTrainerCastres/Group1-A/HeartBeat",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "95c338bedb281e80",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 200,
-        "y": 480,
-        "wires": [
-            [
-                "bd410d1a6521b1f0"
-            ]
-        ]
-    },
-    {
-        "id": "bd410d1a6521b1f0",
-        "type": "ui-gauge",
-        "z": "e41511f7fea66bab",
-        "d": true,
-        "name": "",
-        "group": "545970f6953b7a70",
-        "order": 7,
-        "value": "payload",
-        "valueType": "msg",
-        "width": 3,
-        "height": 3,
-        "gtype": "gauge-half",
-        "gstyle": "needle",
-        "title": "gauge",
-        "alwaysShowTitle": false,
-        "floatingTitlePosition": "top-left",
-        "units": "units",
-        "icon": "",
-        "prefix": "",
-        "suffix": "",
-        "segments": [
-            {
-                "from": "0",
-                "color": "#5cd65c",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "4",
-                "color": "#ffc800",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "40",
-                "color": "#ea5353",
-                "text": "",
-                "textType": "label"
-            }
-        ],
-        "min": 0,
-        "max": "100",
-        "sizeThickness": 16,
-        "sizeGap": 4,
-        "sizeKeyThickness": 8,
-        "styleRounded": true,
-        "styleGlow": false,
-        "className": "",
-        "x": 530,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "97f25a4b75aa964d",
-        "type": "ui-chart",
-        "z": "e41511f7fea66bab",
-        "group": "68f4e43f521f7cf8",
-        "name": "BPM en fonction du temps (s)",
-        "label": "chart",
-        "order": 3,
-        "chartType": "line",
-        "category": "topic",
-        "categoryType": "msg",
-        "xAxisLabel": "Temps (s)",
-        "xAxisProperty": "",
-        "xAxisPropertyType": "timestamp",
-        "xAxisType": "time",
-        "xAxisFormat": "",
-        "xAxisFormatType": "auto",
-        "xmin": "",
-        "xmax": "",
-        "yAxisLabel": "BPM",
-        "yAxisProperty": "payload",
-        "yAxisPropertyType": "msg",
-        "ymin": "0",
-        "ymax": "200",
-        "bins": 10,
-        "action": "append",
-        "stackSeries": false,
-        "pointShape": "circle",
-        "pointRadius": 4,
-        "showLegend": true,
-        "removeOlder": 1,
-        "removeOlderUnit": "60",
-        "removeOlderPoints": "",
-        "colors": [
-            "#0095ff",
-            "#ff0000",
-            "#ff7f0e",
-            "#2ca02c",
-            "#a347e1",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "textColor": [
-            "#666666"
-        ],
-        "textColorDefault": true,
-        "gridColor": [
-            "#e5e5e5"
-        ],
-        "gridColorDefault": true,
-        "width": 6,
-        "height": 8,
-        "className": "",
-        "interpolation": "linear",
-        "x": 590,
-        "y": 820,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ab3032a2d87b13b6",
-        "type": "function",
-        "z": "e41511f7fea66bab",
-        "name": "storeBpm",
-        "func": "let array = flow.get(\"bpm\");\n\narray.push(msg.payload);\n\nflow.set(\"bpm\", array);\n\nmsg.payload = array;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"bpm\", new Array());",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "bpm",
-                "module": "bpm"
-            }
-        ],
-        "x": 520,
-        "y": 900,
-        "wires": [
-            [
-                "c7429b31ce344fbd",
-                "21bf0c4966af866f"
-            ]
-        ]
-    },
-    {
-        "id": "c7429b31ce344fbd",
-        "type": "debug",
-        "z": "e41511f7fea66bab",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "21bf0c4966af866f",
-        "type": "function",
-        "z": "e41511f7fea66bab",
-        "name": "calculateAverage",
-        "func": "let array = flow.get(\"bpm\");\n\nlet total = 0;\n\nfor(let i = 0; i < array.length - 1; i++)\n{\n    total += array[i];\n}\n\nlet average = Math.round(total/array.length);\n\nflow.set(\"average\", average);\n\nmsg.payload = average;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "// Le code ajouté ici sera exécuté une fois\n// à chaque démarrage du noeud.\nflow.set(\"average\", 0);",
-        "finalize": "",
-        "libs": [],
-        "x": 710,
-        "y": 1020,
-        "wires": [
-            [
-                "66b54d751bd5d0ce",
-                "56eba104dbe983b2"
-            ]
-        ]
-    },
-    {
-        "id": "66b54d751bd5d0ce",
-        "type": "ui-text",
-        "z": "e41511f7fea66bab",
-        "group": "68f4e43f521f7cf8",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "displayAverage",
-        "label": "Moyenne BPM",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "average",
-        "valueType": "flow",
-        "x": 940,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "56eba104dbe983b2",
-        "type": "debug",
-        "z": "e41511f7fea66bab",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 920,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "a41f7e8fc57c8002",
-        "type": "mqtt in",
-        "z": "e41511f7fea66bab",
-        "name": "",
-        "topic": "homeTrainerCastres/Group2-A/Bouton",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "95c338bedb281e80",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 210,
-        "y": 1160,
-        "wires": [
-            [
-                "bb559cdcb072b2b1",
-                "308867ed25bd94de",
-                "3ed075334cbbea71"
-            ]
-        ]
-    },
-    {
-        "id": "1ac0f1101ae1980a",
-        "type": "ui-notification",
-        "z": "e41511f7fea66bab",
-        "ui": "8c57ec7dd636743e",
-        "position": "center center",
-        "colorDefault": false,
-        "color": "#ec18d0",
-        "displayTime": "5",
-        "showCountdown": true,
-        "outputs": 1,
-        "allowDismiss": true,
-        "dismissText": "Close",
-        "allowConfirm": false,
-        "confirmText": "Confirm",
-        "raw": false,
-        "className": "",
-        "name": "",
-        "x": 790,
-        "y": 1280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bb559cdcb072b2b1",
-        "type": "function",
-        "z": "e41511f7fea66bab",
-        "name": "Début prise de pouls",
-        "func": "if(msg.payload == \"Début de prise de pouls\")\n{\n    return msg;\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 540,
-        "y": 1220,
-        "wires": [
-            [
-                "1ac0f1101ae1980a"
-            ]
-        ]
-    },
-    {
-        "id": "308867ed25bd94de",
-        "type": "function",
-        "z": "e41511f7fea66bab",
-        "name": "sendAverageBPMToClient",
-        "func": "if(msg.payload == \"Fin de prise de pouls\")\n{\n    let average = flow.get(\"average\");\n\n    msg.payload = average;\n    \n    return msg;\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 1480,
-        "wires": [
-            [
-                "2ce52b8d56a91655"
-            ]
-        ]
-    },
-    {
-        "id": "5fd64e62554672f7",
-        "type": "ui-notification",
-        "z": "e41511f7fea66bab",
-        "ui": "8c57ec7dd636743e",
-        "position": "center center",
-        "colorDefault": false,
-        "color": "#f20707",
-        "displayTime": "5",
-        "showCountdown": true,
-        "outputs": 1,
-        "allowDismiss": true,
-        "dismissText": "Close",
-        "allowConfirm": false,
-        "confirmText": "Confirm",
-        "raw": false,
-        "className": "",
-        "name": "",
-        "x": 790,
-        "y": 1400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2ce52b8d56a91655",
-        "type": "mqtt out",
-        "z": "e41511f7fea66bab",
-        "name": "",
-        "topic": "homeTrainerCastres/Group2-A/AverageBPM",
-        "qos": "2",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "95c338bedb281e80",
-        "x": 790,
-        "y": 1540,
-        "wires": []
-    },
-    {
-        "id": "3ed075334cbbea71",
-        "type": "function",
-        "z": "e41511f7fea66bab",
-        "name": "Show end prise de pouls",
-        "func": "if(msg.payload == \"Fin de prise de pouls\")\n{    \n    return msg;\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 1400,
-        "wires": [
-            [
-                "5fd64e62554672f7"
-            ]
-        ]
+        "name": "Premiers essais",
+        "tooltip": "",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "className": ""
     },
     {
         "id": "17212c109d88741a",
@@ -1230,7 +530,7 @@
         "payload": "Coucou",
         "payloadType": "str",
         "x": 230,
-        "y": 180,
+        "y": 60,
         "wires": [
             [
                 "b11acaad3d79a37f"
@@ -1251,7 +551,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 500,
-        "y": 180,
+        "y": 60,
         "wires": []
     },
     {
@@ -1267,7 +567,7 @@
         "finalize": "",
         "libs": [],
         "x": 300,
-        "y": 260,
+        "y": 120,
         "wires": [
             [
                 "b11acaad3d79a37f"
@@ -1295,8 +595,8 @@
         "topic": "",
         "payload": "Bruh",
         "payloadType": "str",
-        "x": 110,
-        "y": 260,
+        "x": 130,
+        "y": 120,
         "wires": [
             [
                 "01b80140034d1ff3"
@@ -1317,8 +617,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 140,
-        "y": 380,
+        "x": 160,
+        "y": 240,
         "wires": [
             [
                 "8414a85b7b0b1e72"
@@ -1346,8 +646,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 550,
-        "y": 380,
+        "x": 530,
+        "y": 240,
         "wires": []
     },
     {
@@ -1364,8 +664,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 180,
-        "y": 560,
+        "x": 160,
+        "y": 380,
         "wires": [
             [
                 "4610bf695fb740ca",
@@ -1394,7 +694,7 @@
         "className": "",
         "name": "OIIA Notif",
         "x": 520,
-        "y": 560,
+        "y": 360,
         "wires": [
             []
         ]
@@ -1421,7 +721,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 530,
-        "y": 640,
+        "y": 420,
         "wires": []
     },
     {
@@ -1525,8 +825,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 200,
-        "y": 480,
+        "x": 180,
+        "y": 300,
         "wires": [
             [
                 "de724e454f04063f"
@@ -1582,8 +882,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 530,
-        "y": 480,
+        "x": 510,
+        "y": 300,
         "wires": [
             []
         ]
@@ -1742,16 +1042,16 @@
         "id": "616e332627e687d6",
         "type": "debug",
         "z": "31f690d7ee5a4896",
-        "name": "debug 3",
+        "name": "AVERAGE BPM",
         "active": true,
         "tosidebar": true,
-        "console": false,
+        "console": true,
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
+        "x": 1190,
         "y": 1120,
         "wires": []
     },
@@ -1772,7 +1072,8 @@
         "y": 1160,
         "wires": [
             [
-                "2648c51923478ffd"
+                "2648c51923478ffd",
+                "d52e9bef93327b5d"
             ]
         ]
     },
@@ -1781,7 +1082,7 @@
         "type": "ui-notification",
         "z": "31f690d7ee5a4896",
         "ui": "8c57ec7dd636743e",
-        "position": "center center",
+        "position": "bottom left",
         "colorDefault": false,
         "color": "#ec18d0",
         "displayTime": "5",
@@ -1794,8 +1095,8 @@
         "raw": false,
         "className": "",
         "name": "",
-        "x": 850,
-        "y": 1200,
+        "x": 890,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -1826,7 +1127,7 @@
         "type": "function",
         "z": "31f690d7ee5a4896",
         "name": "sendAverageBPMToClient",
-        "func": "if(msg.payload == \"Stop measure\")\n{\n    let average = flow.get(\"average\");\n\n    msg.payload = average;\n    \n    return msg;\n}",
+        "func": "if(msg.payload == \"Stop measure\")\n{\n    let average = flow.get(\"average\");\n\n    msg.payload = average;\n    // ↓ A décommenter pour entendre la Marche Impériale\n    // msg.payload = 150;\n\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1846,7 +1147,7 @@
         "type": "ui-notification",
         "z": "31f690d7ee5a4896",
         "ui": "8c57ec7dd636743e",
-        "position": "center center",
+        "position": "bottom left",
         "colorDefault": false,
         "color": "#f20707",
         "displayTime": "5",
@@ -1987,7 +1288,7 @@
         "className": "",
         "value": "timeWithSeconds",
         "valueType": "flow",
-        "x": 760,
+        "x": 820,
         "y": 1360,
         "wires": []
     },
@@ -2012,60 +1313,6 @@
                 "8f8f98f14ff480ac"
             ]
         ]
-    },
-    {
-        "id": "d68fbab6747c2131",
-        "type": "ui-text-input",
-        "z": "31f690d7ee5a4896",
-        "group": "4e083684d57c66c0",
-        "name": "",
-        "label": "Durée de prise de pouls",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "topic": "duration",
-        "topicType": "str",
-        "mode": "number",
-        "tooltip": "",
-        "delay": 300,
-        "passthru": true,
-        "sendOnDelay": false,
-        "sendOnBlur": false,
-        "sendOnEnter": true,
-        "className": "",
-        "clearable": false,
-        "sendOnClear": false,
-        "icon": "",
-        "iconPosition": "left",
-        "iconInnerPosition": "inside",
-        "x": 250,
-        "y": 1020,
-        "wires": [
-            [
-                "d246a87825c019e3",
-                "a8a72a65ece2f488",
-                "162ff6e4b0d45381",
-                "05d981b48988975d",
-                "dbb541996a6bfdc8"
-            ]
-        ]
-    },
-    {
-        "id": "d246a87825c019e3",
-        "type": "debug",
-        "z": "31f690d7ee5a4896",
-        "name": "DUREE MAXIMUM",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 590,
-        "y": 1080,
-        "wires": []
     },
     {
         "id": "c85dbae6f304b731",
@@ -2168,7 +1415,7 @@
         "id": "05d981b48988975d",
         "type": "function",
         "z": "31f690d7ee5a4896",
-        "name": "clear BPM",
+        "name": "clear BPM and progress bar",
         "func": "if (msg.topic == \"duration\")\n{\n    msg.payload = 0;\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
@@ -2176,11 +1423,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
+        "x": 540,
         "y": 740,
         "wires": [
             [
-                "253678c8df601ec3"
+                "253678c8df601ec3",
+                "80f307f3e7cd8565"
             ]
         ]
     },
@@ -2196,7 +1444,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
+        "x": 580,
         "y": 940,
         "wires": [
             [
@@ -2205,7 +1453,169 @@
         ]
     },
     {
-        "id": "ee583f7b3c0a33cc",
+        "id": "012a577a1db1fc81",
+        "type": "ui-form",
+        "z": "31f690d7ee5a4896",
+        "name": "Durée de prise de pouls (en secondes)",
+        "group": "4e083684d57c66c0",
+        "label": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Durée de prise de pouls (en secondes)",
+                "key": "duration",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "duration": ""
+        },
+        "payload": "",
+        "submit": "Enregistrer",
+        "cancel": "Annuler",
+        "resetOnSubmit": true,
+        "topic": "duration",
+        "topicType": "str",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 170,
+        "y": 780,
+        "wires": [
+            [
+                "630c14604695a594",
+                "c7dc7f54c4d61947",
+                "d0bb83b935c2d392"
+            ]
+        ]
+    },
+    {
+        "id": "630c14604695a594",
+        "type": "debug",
+        "z": "31f690d7ee5a4896",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "c7dc7f54c4d61947",
+        "type": "function",
+        "z": "31f690d7ee5a4896",
+        "name": "Send real duration from form",
+        "func": "if(msg.topic == \"duration\")\n{\n    let duration = parseInt(msg.payload.duration);\n    msg.payload = duration;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 1020,
+        "wires": [
+            [
+                "05d981b48988975d",
+                "162ff6e4b0d45381",
+                "dbb541996a6bfdc8",
+                "a8a72a65ece2f488",
+                "961b8b35868b5c23"
+            ]
+        ]
+    },
+    {
+        "id": "b0aeb996aaf14993",
+        "type": "ui-audio",
+        "z": "31f690d7ee5a4896",
+        "group": "",
+        "ui": "8c57ec7dd636743e",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "mode": "tts",
+        "voice": "Microsoft Julie - French (France)",
+        "src": "",
+        "autoplay": "off",
+        "loop": "off",
+        "muted": "off",
+        "x": 960,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0bb83b935c2d392",
+        "type": "function",
+        "z": "31f690d7ee5a4896",
+        "name": "Send Text to read",
+        "func": "if(msg.topic == \"duration\")\n{\n    let duration = msg.payload.duration;\n    \n    msg.payload = \"Durée configurée à \" + duration + \" secondes. Appuyez sur le bouton pour commencer la mesure\";\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 600,
+        "wires": [
+            [
+                "b0aeb996aaf14993"
+            ]
+        ]
+    },
+    {
+        "id": "961b8b35868b5c23",
+        "type": "function",
+        "z": "31f690d7ee5a4896",
+        "name": "clear chronometer",
+        "func": "if(msg.topic == \"duration\")\n{\n    flow.set(\"timeWithSeconds\", \"0s\");\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1120,
+        "wires": [
+            [
+                "4a0786ebe91c75b3"
+            ]
+        ]
+    },
+    {
+        "id": "d52e9bef93327b5d",
+        "type": "debug",
+        "z": "31f690d7ee5a4896",
+        "name": "BUTTON PRESSED",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "4a67d04c7aad118f",
         "type": "global-config",
         "env": [],
         "modules": {
