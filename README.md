@@ -1,6 +1,9 @@
 # ArduinoHomeTrainer
 Projet Arduino Home Trainer - Capteurs sur le vivant
 
+→ [Lire le Wiki](https://github.com/aiolah/ArduinoHomeTrainer/wiki/Wiki-Capteur-Arduino-A.VAITI---G.DURAND)
+→ [Réflexions, ouverture et critiques du projet Home Trainer](https://github.com/aiolah/ArduinoHomeTrainer/wiki/R%C3%A9flexions,-ouverture-et-critiques-du-projet-Home-Trainer)
+
 ## Liens importants
 
 ### Capteur de pulsations KY039HS
