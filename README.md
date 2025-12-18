@@ -1,7 +1,7 @@
 # ArduinoHomeTrainer
 Projet Arduino Home Trainer - Capteurs sur le vivant
 
-→ [Lire le Wiki](https://github.com/aiolah/ArduinoHomeTrainer/wiki/Wiki-Capteur-Arduino-A.VAITI---G.DURAND)
+→ [Lire le Wiki](https://github.com/aiolah/ArduinoHomeTrainer/wiki/Wiki-Capteur-Arduino-A.VAITI---G.DURAND)<br>
 → [Réflexions, ouverture et critiques du projet Home Trainer](https://github.com/aiolah/ArduinoHomeTrainer/wiki/R%C3%A9flexions,-ouverture-et-critiques-du-projet-Home-Trainer)
 
 ## Liens importants
