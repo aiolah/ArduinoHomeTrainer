@@ -4,10 +4,10 @@ Projet Arduino Home Trainer - Capteurs sur le vivant
 ## Liens importants
 
 ### Capteur de pulsations KY039HS
-- [Capteur de pulsations KY039HS - Go Tronic](https://www.gotronic.fr/art-capteur-de-pulsations-ky039hs-29154.htm)
+- [Capteur de pulsations KY039HS - Go Tronic](https://www.gotronic.fr/art-capteur-de-pulsations-ky039hs-29154.htm?srsltid=AfmBOopzSFi2p9KHAzojzBaS1gQzyV9kZSHdhAaiRsvSjjjbyFX2V8Zv)
 - [Heartbeat sensor - Joy-it](https://joy-it.net/en/products/SEN-KY039HS)
 - [Manuel en anglais du capteur](https://joy-it.net/files/files/Produkte/SEN-KY039HS/SEN-KY039HS-Manual-21-05-19.pdf)
 
 ### Module haut-parleur GT520
-- [Module haut-parleur GT520 - Go Tronic](https://www.gotronic.fr/art-module-haut-parleur-gt520-36067.htm)
+- [Module haut-parleur GT520 - Go Tronic](https://www.gotronic.fr/art-module-haut-parleur-gt520-36067.htm?srsltid=AfmBOoplCRcyckXlqjQHaklgPNTBbQxvgNZxFA5jJe-XScNBVLYNCvVd)
 - [Guide d'utilisation - Go Tronic](https://www.gotronic.fr/pj2-38027-gt0520-3116.pdf)
